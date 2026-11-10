@@ -166,7 +166,7 @@ nav:
           - View Device Details: ZeroTrustAccessGovEdition/005a-devicedetails.md
           - Package Deployment: ZeroTrustAccessGovEdition/packagedeployer.md
       - Access Policies:
-          - Configure Access Policies: ZeroTrustAccessGovEdition/007-accesscontrol.md
+          - Role-Based Access Policies: ZeroTrustAccessGovEdition/007-accesscontrol.md
       - Advanced Configurations:
           - Data Management: ZeroTrustAccessGovEdition/019-datamanagement.md
           - VPN Profile: ZeroTrustAccessGovEdition/010-VPNProfileSetup.md

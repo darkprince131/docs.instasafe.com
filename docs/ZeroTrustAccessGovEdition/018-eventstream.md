@@ -3,7 +3,10 @@ comments: true
 ---
 ZTAA supports integration with external SIEM products. This feature is exclusively used for streaming/sharing system events to customer for their SIEM integration/Analysis.
 
-It also configures Email and SMS alerts for a wide range of events including security incidents, resource utilization, user-related issues, and other critical activities.
+Event streaming is for sending system events to an external system. Email alerts to
+administrators are configured separately, on risk profiles, and reports can be emailed on a
+schedule through report subscriptions - both are covered in
+[Email Alerts and Scheduled Reports](email-alerts.md).
 
 ## Creating Event Stream Profile
 

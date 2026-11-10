@@ -1,0 +1,6 @@
+mkdocs
+mkdocs-rtd-dropdown
+mkdocs-material
+mkdocs-cinder
+mkdocs-kroki-plugin
+mkdocs-git-revision-date-localized-plugin

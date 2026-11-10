@@ -1,0 +1,143 @@
+
+###ZTAA: Desktop Watermark & Endpoint Policy Configuration Guide
+To enhance data security and discourage unauthorized screen capture or screen recording, ZTAA offers a Watermark Endpoint Policy that displays a non-removable watermark on the user's screen once a VPN connection is established. The watermark disappears automatically when the VPN disconnects.
+
+###Acceptance Criteria
+ The watermark must appear automatically when VPN is connected
+  The watermark must be removed once VPN is disconnected
+  The user must not be able to tamper with, remove, or bypass the watermark
+###Supported Operating Systems
+Windows
+
+
+macOS
+
+
+Linux
+
+
+Android
+
+
+iOS
+
+
+###Section 1: Configuring Desktop Watermark
+### Prerequisite
+Admin access to the ZTAA (InstaSafe) Console
+
+
+### Steps to Configure Desktop Watermark Settings
+Go to Perimeter Management > Desktop Watermark
+
+
+Click on (+) Add New Desktop Watermark
+
+
+Enter a Display Name and click Submit
+
+
+Click on the newly created Desktop Watermark profile
+
+
+Click Upload to add the Watermark Logo
+
+
+Optionally, enter your Company Slogan
+
+
+Enable any of the following display fields as per your preference:
+
+
+Username
+
+
+Tenant Slug
+
+
+Client IP
+
+
+Date
+
+
+Device ID
+
+
+Adjust the opacity level of the watermark
+
+
+
+###Section 2: Configuring the Watermark Endpoint Policy
+### Steps to Configure Watermark Endpoint Policy
+Log in to the InstaSafe Console with Admin credentials
+
+
+Go to Access Policy > Endpoint Policy
+
+
+Click Add Policy
+
+
+Enter a Display Name for the policy
+
+
+Click Next
+
+
+Select Watermark and proceed
+
+
+Choose the previously configured Desktop Watermark profile
+
+
+Select the Operating System(s) to apply the policy to
+
+
+Click Next
+
+
+Add the target User(s) or User Group(s)
+
+
+Set the condition to "When VPN is Connected"
+
+
+Click Next and then Submit
+
+
+
+Section 3: Testing Watermark via ZTNA UI Client
+### Prerequisites
+The user must be assigned to a VPN application
+
+
+The ZTNA UI Client must be installed
+
+
+### Steps to Verify Watermark Display
+Launch the ZTNA UI Client
+
+
+Enter the InstaSafe Workspace URL
+
+
+Authenticate via the redirected InstaSafe login page
+
+
+When prompted, click "Open InstaSafe ZTNA Agent"
+
+
+The ZTNA Agent will launch — click Connect
+
+
+Upon connection, the watermark will appear on the desktop screen
+
+
+ 
+
+
+
+
+
+

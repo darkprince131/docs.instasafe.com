@@ -1,0 +1,3 @@
+include:
+  - project: 'instasafesdp/instasafesdp-pipelines'
+    file: 'projects/.gitlab-ci-docs-instasafe-io.yml'

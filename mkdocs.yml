@@ -1,0 +1,474 @@
+---
+site_name: InstaSafe Documentation Hub
+theme:
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigate.top
+    - search.suggest
+    - search.highlight
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      toggle: 
+        icon: material/toggle-switch-off-outline
+        name: switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: switch to light mode
+      primary: teal
+      accent: lime
+site_url: https://docs.instasafe.com
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: false
+      fallback_to_build_date: true
+  - kroki
+  - search
+  - tags: null
+nav:
+  - Zero Trust Access (SaaS/Cloud):
+      - Introduction: Zero Trust Application Access/001-productIntroduction.md
+      - Architecture: Zero Trust Application Access/002-architecture.md
+      - Admin Guide:
+          - Prerequisites: Zero Trust Application Access/031-prerequisites.md
+          - Getting Started: Zero Trust Application Access/003-gettingstarted.md
+      - Identity Management:
+          - Create an User: Zero Trust Application Access/004-creatingusers.md
+          - Create an User Group: Zero Trust Application Access/004b-usergroup.md
+          - Import Users from AD/LDAP: Zero Trust Application Access/008-importADusers.md
+          - Import Users from Azure AD: Zero Trust Application Access/009-AzureADsync.md
+          - Log into ZTAA via SSO: Zero Trust Application Access/013b-ConfiguringZTAAasSPwithSAML.md
+          - ZTAA as IDP for SSO: Zero Trust Application Access/013-ConfiguringZTAAasSSOwithSAML.md
+          - Configure Multi Factor Authentication: Zero Trust Application Access/011-twofactor.md
+          - RADIUS Authentication: Zero Trust Application Access/ztaa-radius-server.md
+          - LDAP Authentication: Zero Trust Application Access/ldap-authentication.md
+          - Self Service AD Password Reset: Zero Trust Application Access/SelfServiceADPwdReset.md
+      - Perimeter Management:
+          - Gateways: Zero Trust Application Access/006agateway.md
+          - Create Gateways: Zero Trust Application Access/006-creatinggateways.md
+          - Create Application: Zero Trust Application Access/005-creatingapplication.md
+          - Add Application to Gateway: Zero Trust Application Access/006b-addapptogateway.md
+          - Manage Agent Release: Zero Trust Application Access/005b-agentrelease.md
+          - View Device Details: Zero Trust Application Access/005a-devicedetails.md
+          - Package Deployment: Zero Trust Application Access/packagedeployer.md
+      - Access Policies:
+          - Configure Access Policies: Zero Trust Application Access/007-accesscontrol.md
+      - Advanced Configurations:
+          - Data Management: Zero Trust Application Access/019-datamanagement.md
+          - VPN Profile: Zero Trust Application Access/010-VPNProfileSetup.md
+          - Intranet Profile: Zero Trust Application Access/034-intranetprofile.md
+      - Auditing and Monitoring:
+          - Audit Logs: Zero Trust Application Access/017-auditlog.md
+          - Event Stream Profile: Zero Trust Application Access/018-eventstream.md
+      - Multi-factor Authentication (MFA):
+          - Configure MFA: Zero Trust Application Access/mfa-configure.md
+          - MFA Login: Zero Trust Application Access/mfa-login.md
+          - WebAuthn MFA: Zero Trust Application Access/webauthn-fido2-mfa.md
+          - Security Question MFA: Zero Trust Application Access/mfa-security-question.md
+          - Recovery Codes MFA: Zero Trust Application Access/mfa-recovery-code.md
+          - Desktop MFA: Zero Trust Application Access/desktop_mfa.md
+          - Network Devices MFA: Zero Trust Application Access/network_devices_mfa.md
+          - Outlook Web Access MFA: Zero Trust Application Access/owa_mfa.md
+          - Phishing-Resistant MFA: Zero Trust Application Access/mfa-phishing-resistant.md
+          - Conditional MFA: Zero Trust Application Access/mfa-conditional.md
+      - Single Sign-On (SSO):
+          - SAML Single Sign-On: Zero Trust Application Access/saml-single-sign-on.md
+      - Agent based Access:
+          - Desktop agents:
+              - ZTNA Agent: Zero Trust Application Access/ztna_app_access.md
+              - ZTAA Agent: Zero Trust Application Access/ztaa-agent.md
+          - Mobile agents: Zero Trust Application Access/mobileagent.md  
+      - Agentless Access: Zero Trust Application Access/agentless.md 
+      - Endpoint Controls:
+          - Watermarking: Zero Trust Application Access/watermarking.md
+          - Network Filter: Zero Trust Application Access/networkfilter.md
+          - App Filter: Zero Trust Application Access/appfilter.md
+          - Block Internet: Zero Trust Application Access/internetcontrol.md
+          - Clipboard control: Zero Trust Application Access/clipboardcontrol.md
+          - Chrome control: Zero Trust Application Access/chromecontrols.md
+          - Inactivity Timeout: Zero Trust Application Access/inactivity_timeout.md
+      - Contextual Access:
+          - Application Access Time: Zero Trust Application Access/applicationaccesstime.md
+          - Geolocation Based Access: Zero Trust Application Access/geolocationbasedaccess.md
+          - Based on Device Binding: Zero Trust Application Access/devicebinding.md
+          - Based on Device Posture: Zero Trust Application Access/deviceposture.md
+          - Microsoft O365 & SAML apps: Zero Trust Application Access/contextualaccess-o365.md
+      - Conditional Access:
+          - Conditional Access with MDM: Zero Trust Application Access/mobile-device-management.md      
+      - Application Access:
+          - IPv6 Application Access: Zero Trust Application Access/ipv6-application-access.md
+      - Integrations:
+          - CrowdStrike XDR: Zero Trust Application Access/integrations-crowdstrike.md
+          - Firewall - PaloAlto: Zero Trust Application Access/integrations-paloalto.md
+      - Use Cases:
+          - Secure Access: Zero Trust Application Access/secureaccess.md
+          - Restrict Access: Zero Trust Application Access/restrict_access.md
+          - Device Authorization: Zero Trust Application Access/deviceauthorization.md
+          - Domain Joining: Zero Trust Application Access/domainjoin.md
+          - SAML based SSO: Zero Trust Application Access/013-ConfiguringZTAAasSSOwithSAML.md
+          - API based SSO: Zero Trust Application Access/apibasedsso.md
+          - Always ON: Zero Trust Application Access/alwayson.md
+          - Passwordless: Zero Trust Application Access/passwordless.md
+          - Windows MFA: Zero Trust Application Access/windows_mfa.md
+      - End User Guide:
+          - User Login: Zero Trust Application Access/015-userlogin.md
+          - Download and Install the agent:
+              - ZTAA Agent: Zero Trust Application Access/016-AgentInstallation.md
+              - Windows Installation: Zero Trust Application Access/windowsagent.md
+              - Linux Installation: Zero Trust Application Access/linuxagent.md
+              - Mac Installation: Zero Trust Application Access/macagent.md
+              - Android and iOS Installation: Zero Trust Application Access/mobileagent.md
+              - ZTNA Agent: Zero Trust Application Access/ztnaagent.md
+          - Configure Authenticator app: Zero Trust Application Access/026authenticator.md
+          - MFA Login: Zero Trust Application Access/mfa-registration.md
+          - Password Protected Agent Uninstallation: Zero Trust Application Access/password-protected-agent.md
+      - Trouble Shooting:
+          - Basic Steps: Zero Trust Application Access/025c-applicationaccessissue.md
+          - ZTNA Logs: Zero Trust Application Access/ztaa_logs.md
+          - Raising a Support Ticket: Zero Trust Application Access/025-supportticket.md
+          - FAQs: Zero Trust Application Access/faqs.md
+      - Release Notes: Zero Trust Application Access/030-Releasenote.md
+      - Product Known Issues: Zero Trust Application Access/032-ProductLimitations.md
+      - End of Support: Zero Trust Application Access/033-EndofSupport.md
+      - Lets Get Started!: Zero Trust Application Access/003-gettingstarted.md
+      - About: about.md
+  - Zero Trust Access (Gov-Edition):
+      - Introduction: ZeroTrustAccessGovEdition/001-productIntroduction.md
+      - Architecture: ZeroTrustAccessGovEdition/002-architecture.md
+      - Admin Guide:
+          - Prerequisites: ZeroTrustAccessGovEdition/031-prerequisites.md
+          - Getting Started: ZeroTrustAccessGovEdition/003-gettingstarted.md
+      - Identity Management:
+          - Create User: ZeroTrustAccessGovEdition/004-creatingusers.md
+          - Create User Group: ZeroTrustAccessGovEdition/004b-usergroup.md
+          - Authentication Profile: ZeroTrustAccessGovEdition/authenticationprofile.md
+          - Import Users from AD/LDAP: ZeroTrustAccessGovEdition/008-importADusers.md
+          - Import Users from Azure AD: ZeroTrustAccessGovEdition/009-AzureADsync.md
+          - Log into ZTAA via SSO: ZeroTrustAccessGovEdition/013b-ConfiguringZTAAasSPwithSAML.md
+          - ZTAA as IDP for SSO: ZeroTrustAccessGovEdition/013-ConfiguringZTAAasSSOwithSAML.md
+          - Configure Multi Factor Authentication: ZeroTrustAccessGovEdition/011-twofactor.md
+          - RADIUS Authentication: ZeroTrustAccessGovEdition/ztaa-radius-server.md
+          - LDAP Authentication: ZeroTrustAccessGovEdition/ldap-authentication.md
+          - Self Service AD Password Reset: ZeroTrustAccessGovEdition/SelfServiceADPwdReset.md
+      - Perimeter Management:
+          - Gateways: ZeroTrustAccessGovEdition/006agateway.md
+          - Create Gateways: ZeroTrustAccessGovEdition/006-creatinggateways.md
+          - Create Application: ZeroTrustAccessGovEdition/005-creatingapplication.md
+          - Add Application to Gateway: ZeroTrustAccessGovEdition/006b-addapptogateway.md
+          - Manage Agent Release: ZeroTrustAccessGovEdition/005b-agentrelease.md
+          - View Device Details: ZeroTrustAccessGovEdition/005a-devicedetails.md
+          - Package Deployment: ZeroTrustAccessGovEdition/packagedeployer.md
+      - Access Policies:
+          - Configure Access Policies: ZeroTrustAccessGovEdition/007-accesscontrol.md
+      - Advanced Configurations:
+          - Data Management: ZeroTrustAccessGovEdition/019-datamanagement.md
+          - VPN Profile: ZeroTrustAccessGovEdition/010-VPNProfileSetup.md
+          - Intranet Profile: ZeroTrustAccessGovEdition/034-intranetprofile.md
+      - Auditing and Monitoring:
+          - Audit Logs: ZeroTrustAccessGovEdition/017-auditlog.md
+          - Event Stream Profile: ZeroTrustAccessGovEdition/018-eventstream.md
+      - Multi-factor Authentication (MFA):
+          - Configure MFA: ZeroTrustAccessGovEdition/mfa-configure.md
+          - MFA Login: ZeroTrustAccessGovEdition/mfa-login.md
+          - WebAuthn MFA: ZeroTrustAccessGovEdition/webauthn-fido2-mfa.md
+          - Security Question MFA: ZeroTrustAccessGovEdition/mfa-security-question.md
+          - Recovery Codes MFA: ZeroTrustAccessGovEdition/mfa-recovery-code.md
+          - Desktop MFA: ZeroTrustAccessGovEdition/desktop_mfa.md
+          - Network Devices MFA: ZeroTrustAccessGovEdition/network_devices_mfa.md
+          - Outlook Web Access MFA: ZeroTrustAccessGovEdition/owa_mfa.md
+          - Phishing-Resistant MFA: ZeroTrustAccessGovEdition/mfa-phishing-resistant.md
+          - Conditional MFA: ZeroTrustAccessGovEdition/mfa-conditional.md
+      - Single Sign-On (SSO):
+          - SAML Single Sign-On: ZeroTrustAccessGovEdition/saml-single-sign-on.md
+      - Agent based Access:
+          - Desktop agents:
+              - ZTNA Agent: ZeroTrustAccessGovEdition/ztna_app_access.md
+              - ZTAA Agent: ZeroTrustAccessGovEdition/ztaa-agent.md
+          - Mobile agents: ZeroTrustAccessGovEdition/mobileagent.md  
+      - Agentless Access: ZeroTrustAccessGovEdition/agentless.md 
+      - Endpoint Controls:
+          - Watermarking: ZeroTrustAccessGovEdition/watermarking.md
+          - Network Filter: ZeroTrustAccessGovEdition/networkfilter.md
+          - App Filter: ZeroTrustAccessGovEdition/appfilter.md
+          - Block Internet: ZeroTrustAccessGovEdition/internetcontrol.md
+          - Clipboard control: ZeroTrustAccessGovEdition/clipboardcontrol.md
+          - Chrome control: ZeroTrustAccessGovEdition/chromecontrols.md
+          - Inactivity Timeout: ZeroTrustAccessGovEdition/inactivity_timeout.md
+          - InstaSafe Stick: ZeroTrustAccessGovEdition/USBstick.md
+      - Contextual Access:
+          - Application Access Time: ZeroTrustAccessGovEdition/applicationaccesstime.md
+          - Geolocation Based Access: ZeroTrustAccessGovEdition/geolocationbasedaccess.md
+          - Based on Device Binding: ZeroTrustAccessGovEdition/devicebinding.md
+          - Based on Device Posture: ZeroTrustAccessGovEdition/deviceposture.md
+          - Microsoft O365 & SAML apps: ZeroTrustAccessGovEdition/contextualaccess-o365.md
+      - Conditional Access:
+          - Conditional Access with MDM: ZeroTrustAccessGovEdition/mobile-device-management.md      
+      - Application Access:
+          - IPv6 Application Access: ZeroTrustAccessGovEdition/ipv6-application-access.md
+      - Use Cases:
+          - Secure Access: ZeroTrustAccessGovEdition/secureaccess.md
+          - Restrict Access: ZeroTrustAccessGovEdition/restrict_access.md
+          - Device Authorization: ZeroTrustAccessGovEdition/deviceauthorization.md
+          - Domain Joining: ZeroTrustAccessGovEdition/domainjoin.md
+          - SAML based SSO: ZeroTrustAccessGovEdition/013-ConfiguringZTAAasSSOwithSAML.md
+          - API based SSO: ZeroTrustAccessGovEdition/apibasedsso.md
+          - Always ON: ZeroTrustAccessGovEdition/alwayson.md
+          - Passwordless: ZeroTrustAccessGovEdition/passwordless.md
+          - Windows MFA: ZeroTrustAccessGovEdition/windows_mfa.md
+      - End User Guide:
+          - User Login: ZeroTrustAccessGovEdition/015-userlogin.md
+          - Download and Install the agent:
+              - ZTAA Agent: ZeroTrustAccessGovEdition/016-AgentInstallation.md
+              - Windows Installation: ZeroTrustAccessGovEdition/windowsagent.md
+              - Linux Installation: ZeroTrustAccessGovEdition/linuxagent.md
+              - Mac Installation: ZeroTrustAccessGovEdition/macagent.md
+              - Android and iOS Installation: ZeroTrustAccessGovEdition/mobileagent.md
+              - ZTNA Agent: ZeroTrustAccessGovEdition/ztnaagent.md
+          - Configure Authenticator app: ZeroTrustAccessGovEdition/026authenticator.md
+          - MFA Login: ZeroTrustAccessGovEdition/mfa-registration.md
+          - Password Protected Agent Uninstallation: ZeroTrustAccessGovEdition/password-protected-agent.md
+      - Trouble Shooting:
+          - Basic Steps: ZeroTrustAccessGovEdition/025c-applicationaccessissue.md
+          - ZTNA Logs: ZeroTrustAccessGovEdition/ztaa_logs.md
+          - Raising a Support Ticket: ZeroTrustAccessGovEdition/025-supportticket.md
+          - FAQs: ZeroTrustAccessGovEdition/faqs.md
+      - Release Notes: ZeroTrustAccessGovEdition/030-Releasenote.md
+      - Product Known Issues: ZeroTrustAccessGovEdition/032-ProductLimitations.md
+      - End of Support: ZeroTrustAccessGovEdition/033-EndofSupport.md
+      - Lets Get Started!: ZeroTrustAccessGovEdition/003-gettingstarted.md
+      - About: about.md
+  - Identity Security (IdSec Enterprise OnPrem):
+      - Introduction: ZeroTrustEnterprise/001-productIntroduction.md
+      - Architecture: ZeroTrustEnterprise/002-architecture.md
+      - Admin Guide:
+          - Prerequisites: ZeroTrustEnterprise/031-prerequisites.md
+          - Getting Started: ZeroTrustEnterprise/003-gettingstarted.md
+      - User and Identity Management:
+          - Create an User: ZeroTrustEnterprise/004-creatingusers.md
+          - Create an User Group: ZeroTrustEnterprise/004b-usergroup.md
+          - Authentication Profile: ZeroTrustEnterprise/authenticationprofile.md
+          - Import Users from AD/LDAP: ZeroTrustEnterprise/008-importADusers.md
+          - Import Users from Azure AD: ZeroTrustEnterprise/009-AzureADsync.md
+          - Log into ZTAA via SSO: ZeroTrustEnterprise/013b-ConfiguringZTAAasSPwithSAML.md
+          - Configure ZTAA as a Identity Provider for SSO: ZeroTrustEnterprise/013-ConfiguringZTAAasSSOwithSAML.md
+          - Configure Multi Factor Authentication: ZeroTrustEnterprise/011-twofactor.md
+          - Self Service AD Password Reset: ZeroTrustEnterprise/SelfServiceADPwdReset.md
+      - Perimeter and Access Management:
+          - Gateways: ZeroTrustEnterprise/006agateway.md
+          - Create Gateways: ZeroTrustEnterprise/006-creatinggateways.md
+          - Create Application: ZeroTrustEnterprise/005-creatingapplication.md
+          - Configure Access Control Policies: ZeroTrustEnterprise/007-accesscontrol.md
+          - Add Application to Gateway: ZeroTrustEnterprise/006b-addapptogateway.md
+          - Manage Agent Release: ZeroTrustEnterprise/005b-agentrelease.md
+          - View Device Details: ZeroTrustEnterprise/005a-devicedetails.md
+      - Advanced Configurations:
+          - Data Management: ZeroTrustEnterprise/019-datamanagement.md
+          - VPN Profile: ZeroTrustEnterprise/010-VPNProfileSetup.md
+          - Intranet Profile: ZeroTrustEnterprise/034-intranetprofile.md
+      - Auditing and Monitoring:
+          - Audit Logs: ZeroTrustEnterprise/017-auditlog.md
+          - Event Stream Profile: ZeroTrustEnterprise/018-eventstream.md
+      - Use Cases:
+          - Secure Access: ZeroTrustEnterprise/secureaccess.md
+          - Restrict Access: ZeroTrustEnterprise/restrict_access.md
+          - Device Authorization: ZeroTrustEnterprise/deviceauthorization.md
+          - Device Posture: ZeroTrustEnterprise/deviceposture.md
+          - Domain Joining: ZeroTrustEnterprise/domainjoin.md
+          - Identity Provider for SSO: ZeroTrustEnterprise/013-ConfiguringZTAAasSSOwithSAML.md
+          - Always ON: ZeroTrustEnterprise/alwayson.md
+      - End User Guide:
+          - User Login: ZeroTrustEnterprise/015-userlogin.md
+          - Download and Install the agent:
+              - User Agent: ZeroTrustEnterprise/016-AgentInstallation.md
+              - Windows Installation: ZeroTrustEnterprise/windowsagent.md
+              - Linux Installation: ZeroTrustEnterprise/linuxagent.md
+              - Mac Installation: ZeroTrustEnterprise/macagent.md
+              - Android and IOS Installation: ZeroTrustEnterprise/mobileagent.md
+          - Configuring Authenticator: ZeroTrustEnterprise/026authenticator.md
+      - Deployment: ZeroTrustEnterprise/deployment.md
+      - Trouble Shooting:
+          - Basic Steps: ZeroTrustEnterprise/025c-applicationaccessissue.md
+          - Raising a Support Ticket: ZeroTrustEnterprise/025-supportticket.md
+      - Release Notes: ZeroTrustEnterprise/030-Releasenote.md
+      - Product Known Issues: ZeroTrustEnterprise/032-ProductLimitations.md
+      - End of Support: ZeroTrustEnterprise/033-EndofSupport.md
+      - Lets Get Started!: ZeroTrustEnterprise/003-gettingstarted.md
+      - About: about.md
+  - Secure Access (ISA):    
+      - Introduction: Instasafe Secure Access Documentation/001-productIntroduction.md
+      - ISA Components: Instasafe Secure Access Documentation/002-Architecture.md
+      - Admin Guide:   
+        - Prerequisites: Instasafe Secure Access Documentation/003-Deployment.md
+        - Dashboard:  Instasafe Secure Access Documentation/030-Dashboard.md
+        - Controllers and Gateways: Instasafe Secure Access Documentation/018-Deploying_the_ISA_Controller.md
+        - General Settings: Instasafe Secure Access Documentation/040-Add_Company_Contact_Details.md
+        - Authentication Profiles: Instasafe Secure Access Documentation/059-Setting_Password_Constraints.md
+        - Users and Groups:  Instasafe Secure Access Documentation/058-Configuring_Local_Users.md
+        - Devices and Checks: Instasafe Secure Access Documentation/064-Devices.md
+        - Application Access:  Instasafe Secure Access Documentation/056-Configuring_Application_Services.md 
+        - Access Policies:  Instasafe Secure Access Documentation/054-Configuring_Access_Rules.md 
+        - Logs and Reports: Instasafe Secure Access Documentation/053-Live_Users.md
+        - Gateway Agent: Instasafe Secure Access Documentation/020-Supported_Cloud_Platforms_for_ISA_Gateway_Deployment.md
+        - Sub Admins and Roles:  Instasafe Secure Access Documentation/063-Creating_Sub-Admins.md
+        - IDAM:  #added new directory for IDAM
+            - OpenID Provider: Instasafe Secure Access Documentation/092-openid_salesforce.md   #added new file for OpenID provider
+      - Use Cases: 
+        - Single Sign-On: Instasafe Secure Access Documentation/087-SAML.md
+        - Always-On Mode: Instasafe Secure Access Documentation/041-Always-On_Mode.md
+        - Passwordless: Instasafe Secure Access Documentation/088-Passwordless_Authentication.md
+        - Application Blocking:  Instasafe Secure Access Documentation/082-Application_Blocking.md
+      - Contextual Access:
+        - Geo Binding: Instasafe Secure Access Documentation/081-Geo-Binding-Feature.md
+        - Geo Fence: Instasafe Secure Access Documentation/090-Geofence.md
+        - Device Checks: Instasafe Secure Access Documentation/065-Device_Check_Explained.md 
+    #   - Multifactor Authentication:   
+    #             - Google Authenticator: Instasafe Secure Access Documentation/047-Google_Authenticator.md
+    #             - Microsoft Authenticator: Instasafe Secure Access Documentation/048-Microsoft_Authenticator.md
+    #             - Instasafe MFA: Instasafe Secure Access Documentation/091-MFA_Login.md 
+      - End User Guide:
+        - Agent Download & Installation: Instasafe Secure Access Documentation/006-End_User_Guide.md
+        - Multifactor Authentication: Instasafe Secure Access Documentation/091-MFA_Login.md    
+        - Google Authenticator: Instasafe Secure Access Documentation/047-Google_Authenticator.md
+        - Microsoft Authenticator: Instasafe Secure Access Documentation/048-Microsoft_Authenticator.md
+                # - Instasafe MFA: Instasafe Secure Access Documentation/091-MFA_Login.md 
+        - Configure Authenticator App: Instasafe Secure Access Documentation/045-InstaSafe_Authenticator.md
+        - Change phone number of User: Instasafe Secure Access Documentation/031-Changing_phone_number_of_User.md
+        - InstaSafe Credential Provider: Instasafe Secure Access Documentation/046-InstaSafe_Credential_Provider.md   
+      - Troubleshooting and Support: Instasafe Secure Access Documentation/009-SupportTicket.md
+      - FAQs: Instasafe Secure Access Documentation/011-FAQ.md
+      - Release Notes: Instasafe Secure Access Documentation/007-Release Notes.md
+      - Technical Writer Program: Instasafe Secure Access Documentation/008-TechnicalWriterProgram.md
+      - Feedback: Instasafe Secure Access Documentation/010-Feedback.md
+  - i365 Cloud Edition:  
+      - Product Overview: 
+        - Introduction: i365customprivateedition/001-productIntroduction.md
+        - ISA Components: i365customprivateedition/002-Architecture.md
+      - Initial Setup: 
+        - Prerequisites: i365customprivateedition/003-Deployment.md
+        - Dashboard:  i365customprivateedition/030-Dashboard.md
+        - Controllers and Gateways: i365customprivateedition/018-Deploying_the_ISA_Controller.md
+        - Gateway Agent: i365customprivateedition/020-Supported_Cloud_Platforms_for_ISA_Gateway_Deployment.md   
+      - Organization Settings:
+        - Network Configurations:
+            - Configure DNS and WINS: i365customprivateedition/097-DNS_and_WINS.md   
+      - Identity And Provisioning:
+         - Inbound Identity:
+            - Configure SCIM Import: i365customprivateedition/100-SCIM_Import.md
+         - Outbound Federation:
+            - Configure SCIM Export: i365customprivateedition/099-SCIM_Export.md
+            - Configure OpenID Provider: i365customprivateedition/092-openid_salesforce.md
+            - Configure SAML IDP: i365customprivateedition/098-SAML_IDP.md
+            - Configure RADIUS Service: i365customprivateedition/089-Radius.md
+      - Access Policies:
+         - Rule Management:
+            - Role-Based Access Rules: i365customprivateedition/054-Configuring_Access_Rules.md  
+      - Devices: 
+         - Device Management: 
+            - View Device Inventory: i365customprivateedition/064-Devices.md
+            - Configure Device Updates: i365customprivateedition/036-Configuring_Device_Updates.md        
+         - Security & Context Controls:
+            - Configure Device Checks: i365customprivateedition/065-Device_Check_Explained.md
+            - Configure Application Blocking: i365customprivateedition/073-App_Block.md
+      - Monitoring And Audit:
+         - Live Activity:
+            - View Active User: i365customprivateedition/053-Live_Users.md
+            - View Active Gateways: i365customprivateedition/052-Live_Gateways.md
+         - Logs:
+            - Review Session Logs: i365customprivateedition/043-Session_Log.md
+            - Review Access Logs: i365customprivateedition/042-Access_Log.md
+            - Review Application Access Logs: i365customprivateedition/034-Application_Access_Log.md
+         - Reports:
+            - View Data Usage Reports: i365customprivateedition/050-Data_Usage_Report.md
+            - View Time Usage Reports: i365customprivateedition/044-Time_Usage_Report.md        
+      - Exports: 
+         - Export Logs: i365customprivateedition/095-Export_logs.md
+         - Report Subscriptions: i365customprivateedition/096-Report_Subscriptions.md  
+      - Admin Guide:   
+        - Prerequisites: i365customprivateedition/003-Deployment.md
+        - Dashboard:  i365customprivateedition/030-Dashboard.md
+        - Controllers and Gateways: i365customprivateedition/018-Deploying_the_ISA_Controller.md
+        - General Settings: i365customprivateedition/040-Add_Company_Contact_Details.md
+        - Authentication Profiles: i365customprivateedition/059-Setting_Password_Constraints.md
+        - Users and Groups: i365customprivateedition/058-Configuring_Local_Users.md
+        - Devices and Checks: i365customprivateedition/064-Devices.md
+        - Application Access: i365customprivateedition/056-Configuring_Application_Services.md 
+        - Access Policies: i365customprivateedition/054-Configuring_Access_Rules.md 
+        - Logs and Reports: i365customprivateedition/053-Live_Users.md
+        - Gateway Agent: i365customprivateedition/020-Supported_Cloud_Platforms_for_ISA_Gateway_Deployment.md
+        - Sub Admins and Roles: i365customprivateedition/063-Creating_Sub-Admins.md
+        - User Providers: 
+           - SCIM Import: i365customprivateedition/100-SCIM _Import.md
+        - IDAM: 
+            - SCIM Export: i365customprivateedition/099-SCIM _Export.md
+            - OpenID Provider: i365customprivateedition/092-openid_salesforce.md
+            - SAML IDP: i365customprivateedition/098-SAML_IDP.md
+            - RADIUS Service: i365customprivateedition/089-Radius.md
+        - Report Settings: 
+            - Export Logs: i365customprivateedition/095-Export_logs.md
+            - Report Subscriptions: i365customprivateedition/096-Report_Subscriptions.md
+        - User Settings:
+            - DNS and WINS: i365customprivateedition/097-DNS_and_WINS.md
+      - Use Cases: 
+        - Single Sign-On: i365customprivateedition/087-SAML.md
+        - Always-On Mode: i365customprivateedition/041-Always-On_Mode.md
+        - Passwordless: i365customprivateedition/088-Passwordless_Authentication.md
+        - Application Blocking: i365customprivateedition/082-Application_Blocking.md
+      - Contextual Access:
+        - Geo Binding: i365customprivateedition/081-Geo-Binding-Feature.md
+        - Geo Fence: i365customprivateedition/090-Geofence.md
+        - Device Checks: i365customprivateedition/065-Device_Check_Explained.md 
+      - End User Guide:
+        - Agent Download & Installation: i365customprivateedition/006-End_User_Guide.md
+        - Multifactor Authentication: i365customprivateedition/091-MFA_Login.md    
+        - Google Authenticator: i365customprivateedition/047-Google_Authenticator.md
+        - Microsoft Authenticator: i365customprivateedition/048-Microsoft_Authenticator.md
+        - Configure Authenticator App: i365customprivateedition/045-InstaSafe_Authenticator.md
+        - Change phone number of User: i365customprivateedition/031-Changing_phone_number_of_User.md
+        - InstaSafe Credential Provider: i365customprivateedition/046-InstaSafe_Credential_Provider.md
+        - Network Diagnostics: i365customprivateedition/093-Network_Diagnostics.md
+        - Agent Un-installation: i365customprivateedition/094-Agent_Uninstallation.md   
+      - Troubleshooting and Support: i365customprivateedition/009-SupportTicket.md
+      - FAQs: i365customprivateedition/011-FAQ.md
+      - Release Notes: i365customprivateedition/007-Release Notes.md
+      - Technical Writer Program: i365customprivateedition/008-TechnicalWriterProgram.md
+      - Feedback: i365customprivateedition/010-Feedback.md
+copyright: Copyright &copy; 2012 - 2025 InstaSafe Inc
+#
+extra_javascript:
+  - js/hotjar.js 
+#
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: https://instasafe.com
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/InstaSafe
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/InstaSafe/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/instasafe/
+  generator: false
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: 'Thanks for your feedback! Help us improve this page by using our <a
+            href="..." target="_blank" rel="noopener">feedback form</a>.      '
+    provider: google
+    property: UA-123484582-1
+  version:
+    provider: mike

@@ -1,0 +1,13 @@
+/_book/
+/node_modules/
+/book.pdf
+/book.mobi
+/book.epub
+venv/
+/venv
+.venv/
+*.json
+
+site
+logs.txt
+site-test/

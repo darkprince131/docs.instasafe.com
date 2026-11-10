@@ -1,0 +1,31 @@
+.gitignore
+docs/Instasafe Secure Access Documentation/002-Architecture.md
+docs/Instasafe Secure Access Documentation/003-Deployment.md
+docs/Instasafe Secure Access Documentation/006-End_User_Guide.md
+docs/Instasafe Secure Access Documentation/018-Deploying_the_ISA_Controller.md
+docs/Instasafe Secure Access Documentation/020-Supported_Cloud_Platforms_for_ISA_Gateway_Deployment.md
+docs/Instasafe Secure Access Documentation/030-Dashboard.md
+docs/Instasafe Secure Access Documentation/031-Changing_phone_number_of_User.md
+docs/Instasafe Secure Access Documentation/035-Configuring_Report_Subscriptions.md
+docs/Instasafe Secure Access Documentation/040-Add_Company_Contact_Details.md
+docs/Instasafe Secure Access Documentation/041-Always-On_Mode.md
+docs/Instasafe Secure Access Documentation/045-InstaSafe_Authenticator.md
+docs/Instasafe Secure Access Documentation/046-InstaSafe_Credential_Provider.md
+docs/Instasafe Secure Access Documentation/053-Live_Users.md
+docs/Instasafe Secure Access Documentation/056-Configuring_Application_Services.md
+docs/Instasafe Secure Access Documentation/058-Configuring_Local_Users.md
+docs/Instasafe Secure Access Documentation/059-Setting_Password_Constraints.md
+docs/Instasafe Secure Access Documentation/063-Creating_Sub-Admins.md
+docs/Instasafe Secure Access Documentation/064-Devices.md
+docs/Instasafe Secure Access Documentation/065-Device_Check_Explained.md
+docs/Instasafe Secure Access Documentation/069-Configuring_Device_Binding_Using_Automatic_Device_Registration_Details.md
+docs/Instasafe Secure Access Documentation/081-Geo-Binding-Feature.md
+docs/Instasafe Secure Access Documentation/087-SAML.md
+docs/Instasafe Secure Access Documentation/088-Passwordless_Authentication.md
+docs/Instasafe Secure Access Documentation/090-Geofence.md
+docs/Instasafe Secure Access Documentation/091-MFA_Login.md
+docs/about.md
+docs/static/ISA/mfa-explain.png
+docs/static/ztaa/agentrelease.gif
+mkdocs.yml
+requirements.txt

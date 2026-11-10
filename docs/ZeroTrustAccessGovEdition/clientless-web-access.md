@@ -27,6 +27,8 @@ any managed browser with nothing to deploy.
 After signing in, the user lands on a portal with three sections: **Dashboard**,
 **Downloads** and **Applications**.
 
+![The Applications page of the end-user portal](../static/clientless/member-applications.png)
+
 **Applications** lists everything the user is entitled to. It carries a search box and a
 **Filter by Type** facet, so a user with a long list can narrow it to one kind of resource:
 

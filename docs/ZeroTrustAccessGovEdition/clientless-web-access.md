@@ -22,6 +22,32 @@ any managed browser with nothing to deploy.
 | **Per-application entitlement** | A user sees only the applications their access policy allows. See [Role-Based Application Access Control](007-accesscontrol.md). |
 | **Session audit** | RDP and SSH sessions can be recorded for audit. See [Agentless Access](agentless.md) and [Audit Logs](017-auditlog.md). |
 
+## What the user sees
+
+After signing in, the user lands on a portal with three sections: **Dashboard**,
+**Downloads** and **Applications**.
+
+**Applications** lists everything the user is entitled to. It carries a search box and a
+**Filter by Type** facet, so a user with a long list can narrow it to one kind of resource:
+
+| Type | What it opens |
+|---|---|
+| **WEB** | An internal web application, in the browser |
+| **RDP** | A Windows desktop session, rendered in the browser |
+| **SSH** | A terminal session, rendered in the browser |
+| **VNC** | A remote framebuffer session |
+| **DB** | A database endpoint |
+| **WFS** | A file share |
+
+A user who has been entitled to nothing sees an empty list. Applications appear only after an
+access policy grants them, which is what makes the portal per-user rather than a shared
+catalogue.
+
+**Dashboard** shows the user their own current and previous session, the devices registered
+to them, which web and network applications they hold, and the applications they have opened
+recently. It also carries the MFA, device binding, shift schedule and geo binding indicators,
+so a user can see which controls apply to them.
+
 ## Publishing a web application for clientless access
 
 1. **Create the application.** Define the internal web application on the platform — see

@@ -169,6 +169,7 @@ nav:
           - Role-Based Access Rules: ZeroTrustAccessGovEdition/007-accesscontrol.md
       - Advanced Configurations:
           - Data Management: ZeroTrustAccessGovEdition/019-datamanagement.md
+          - Session Controls and Account Lockout: ZeroTrustAccessGovEdition/session-controls.md
           - VPN Profile: ZeroTrustAccessGovEdition/010-VPNProfileSetup.md
           - Intranet Profile: ZeroTrustAccessGovEdition/034-intranetprofile.md
       - Auditing and Monitoring:

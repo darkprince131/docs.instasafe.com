@@ -194,6 +194,7 @@ nav:
               - ZTAA Agent: ZeroTrustAccessGovEdition/ztaa-agent.md
           - Mobile agents: ZeroTrustAccessGovEdition/mobileagent.md  
       - Clientless Web Access: ZeroTrustAccessGovEdition/clientless-web-access.md
+      - Custom Application Icons: ZeroTrustAccessGovEdition/application-icons.md
       - Agentless Access: ZeroTrustAccessGovEdition/agentless.md
       - Endpoint Controls:
           - Watermarking: ZeroTrustAccessGovEdition/watermarking.md

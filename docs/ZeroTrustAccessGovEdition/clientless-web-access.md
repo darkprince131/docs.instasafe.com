@@ -27,7 +27,12 @@ any managed browser with nothing to deploy.
 After signing in, the user lands on a portal with three sections: **Dashboard**,
 **Downloads** and **Applications**.
 
-![The Applications page of the end-user portal](../static/clientless/member-applications.png)
+![A web application on the end-user portal, with its own icon and a WEB badge](../static/clientless/member-applications-web.png)
+
+Each tile is an application the signed-in user is entitled to, carrying the application's
+own icon and a badge naming its type. The same portal lists the other types side by side:
+
+![The portal listing applications of several types](../static/clientless/member-applications.png)
 
 **Applications** lists everything the user is entitled to. It carries a search box and a
 **Filter by Type** facet, so a user with a long list can narrow it to one kind of resource:

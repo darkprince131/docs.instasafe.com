@@ -3,63 +3,260 @@ comments: true
 ---
 # Role-Based Application Access Control
 
-Access policies govern which users reach which applications. ZTAA groups similar users
-together based on their role, responsibility or location, so a policy is normally written
-against a user group rather than against named individuals: the group is the role, and the
-policy is the entitlement that role carries.
+Access rules are how the InstaSafe console grants application access by role rather than
+by individual. Users are grouped by their role in the organisation, the resources they
+need are defined as an application group, and a single access rule binds the two. These
+are identity-based rules that permit access on the basis of the role of the user in the
+organisation, as opposed to parameters such as the source IP address.
 
-A policy names its members, names the applications they may reach, and optionally carries
-logic rules that narrow access further by context. Policies are created in the
-**Access Policies** section of the console, or from **Create policy** in the Quick setup
-panel of the dashboard.
+Rules are defined on the **Access Rules** page, under the **ACCESS POLICIES** menu of the
+web console.
 
-## What an access policy is made of
+## What an access rule is made of
 
-| Element | What it holds |
+| Field | What it holds |
 |---|---|
-| **Name and description** | A name for the policy and a brief description of what it is for. |
-| **Members** | The users the policy applies to. User groups can be selected directly, which is what makes the policy role-based. |
-| **Applications** | One or more applications, chosen from those already published on the platform. |
-| **Logic rules** | Optional contextual conditions - device posture, antivirus details, geolocation and similar - built from [datasets](019-datamanagement.md). |
+| **Name** | A name for the rule. A–Z, a–z, 0–9, up to 50 characters. |
+| **Source Type** | **User**, **User Group**, or **Application**. Choosing User Group is what makes the rule role-based. |
+| **Source** | The user groups the rule applies to. More than one can be added. |
+| **Destination Type** | **Application** or **Application Group**. |
+| **Destination** | The application groups the rule grants or denies. More than one can be added. If Destination Type is Application, the application is defined in the rule by IP address or network plus one or more port numbers. |
+| **Action** | **Allow** or **Deny**. |
 
 ## Granting access to a role in three steps
 
-1. **Group the users by role.** See [Create an User Group](004b-usergroup.md). Administrators
-   act on the group instead of on individual users.
-2. **Publish the applications that role needs.** See
-   [Create an Application](005-creatingapplication.md).
-3. **Bind the two in one access policy.** Add the user group as a member, add the
-   applications, and save. The steps below walk through it screen by screen.
+1. **Group the users by role.** Create the group on the
+   [Local Groups](../i365customprivateedition/057-Configuring_Local_Groups.md) page, or import it from
+   [Microsoft Active Directory](../i365customprivateedition/070-Configuring_Microsoft_Active_Directory__AD__Integration.md)
+   so the directory group becomes the role.
+2. **Define what that role reaches.** Pair the IP addresses or networks with their
+   services on the [Application Groups](../i365customprivateedition/055-Configuring_Application_Groups.md) page.
+   Services themselves are defined under
+   [Application Services](../i365customprivateedition/056-Configuring_Application_Services.md).
+3. **Bind them with one access rule.** Source Type **User Group** → Source *the role* →
+   Destination Type **Application Group** → Destination *the resources* → Action
+   **Allow**. Every member of the group inherits the entitlement, and a user who joins or
+   leaves the group gains or loses it without the rule being touched.
 
-Access is granted by policy, so the same application can be reached by one group and not by
-another, and a group's access changes by editing one policy rather than every user record.
+A **Deny** rule is written the same way and is used to carve an exception out of a
+broader allow.
 
-## Creating Access Policies
+## Configure Access Rules
 
-Access policies can be created from the **Access Policies section** or by directly clicking on **'Create policy  Tab'** in the  Quick setup section of the dashboard .
+The Access Rules page on the ISA web portal allows administrators to define rules to allow
+or deny remote user access to corporate resources. The following types of access rules can
+be created:
 
-1. In the Access policy  Section, Click on **Create New**  button.
+- Allow or deny access to an application or application group from one or more users. The application group must be pre-defined on the Application Group page. The application must be defined within the access rule by specifying an IP address or network with one or more port numbers separated by commas.
 
-2. Enter Name and a brief description of the Application policy and click Next.
+- Allow or deny access to an application or application group from one or more user groups.  The application group must be pre-defined on the Application Group page. The application must be defined within the access rule by specifying an IP address or network with one or more port numbers separated by commas.
 
-3. Click on Add member and  Select the users you want to be a part of the policy. You can also  select User groups directly. Click Next.
+- Allow or deny access to an application or application group from an IP address or network and one or more port numbers. The application group must be pre-defined on the Application Group page. The application must be defined within the access rule by specifying an IP address or network with one or more port numbers separated by commas.
 
-4. Click on Add application text box. Select from list of predefined applications and click next.
+**Features**
 
-5. With the help of managed logic rules contextual access control policies based on different parameters such as device posture, antivirus details, geolocation etc. can be created. Create logic rule with [datasets](019-datamanagement.md) and save the changes.
+- When an allow rule is defined, the ISA controller will initiate a process to ensure proper route configuration. It involves two distinct steps:
 
-P.S. [Datasets must be configured](019-datamanagement.md) before they can be used for creating access control policies. Availability of dataset is subject to subscription.
+    -  The controller will send the relevant route details to the ISA User Agent. These details are used to configure routes on the end-user device.
+    -   Simultaneously, the controller will send route information, including port numbers, to the Gateway Agent for configuring routes on the designated gateway.
 
-The above steps highlighting the process of creating an Access Control Policy can be seen in the video below.
+- Access rules are enforced based on the specificity of the rule. A more specific rule takes precedence over a less specific rule. 
 
-![Creating ACL](../static/ztaa/AccessPolicy.gif)
+**Examples**
 
-## Modifying Access Policies (ACL)
+- A rule that applies to an IP address has priority over a rule that applies to a network, all other parameters being equal. 
+- A deny rule to an IP address takes precedence over an allow rule to a network, all other parameters being equal.
+- Access rules are only applicable to remote users connecting using the ISA User Agent. Rules defined on the Access Rule page do not govern logging into the ISA web portal.
 
-ACL's can be modified in the same way they are created. Go to the Access Control section of the application. You can see a list of existing ACLs.
+This user guide describes the various configuration options to manage access rules on the ISA web portal. 
 
-1. Click on the ACL you wish to modify.
-2. To edit the ACL turn on  EDIT mode. The Update button will now appear.
-3. Now You can edit the ACL. Proceed to the section which you want to edit.  After making necessary modifications click on the Update button.
+**Add Access Rules**
 
-**P.S. - New users can be added into an ACL by Modifying an existing  ACL.**
+- Login to the ISA web console using administrator credentials.
+
+![](../static/ISA/accessrules.png)
+
+- Navigate to the Access Rules page under the ACCESS POLICIES menu.
+
+![](../static/ISA/accessrules1.png)
+
+- Click the Add button at the top.
+
+![](../static/ISA/accessrules2.png)
+
+- On the Add access rule window, under Name, enter a name for the access rule. Characters A-Z, a-z, 0-9 are allowed in this field.  The maximum number of characters allowed is 50.
+
+![](../static/ISA/accessrules3.png)
+
+- Click the Source Type drop-down.
+
+![](../static/ISA/accessrules4.png)
+
+- Select User, User Group, or Application. In this example, we select User Group.
+
+![](../static/ISA/accessrules5.png)
+
+- Click the Source field.
+
+![](../static/ISA/accessrules6.png)
+
+- From the drop-down list, select the user group. Multiple user groups can be added to this field.
+
+![](../static/ISA/accessrules7.png)
+
+- Click the Destination Type drop-down. 
+
+![](../static/ISA/accessrules8.png)
+
+- Select Application or Application Group. 
+
+![](../static/ISA/accessrules9.png)
+
+- Select the application groups. Multiple application groups can be added to the field. 
+
+![](../static/ISA/accessrules10.png)
+
+- Click Action. 
+
+![](../static/ISA/accessrules11.png)
+
+- Select either Allow or Deny.
+
+![](../static/ISA/accessrules12.png)
+
+- Click Save and Add new.
+
+![](../static/ISA/accessrules13.png)
+
+- The new access rule is listed on the page. 
+
+![](../static/ISA/accessrules14.png)
+
+**Edit Access Rule**
+
+- On the Access Rule page, click the name of the access rule you want to edit.
+
+![](../static/ISA/accessrules15.png)
+
+- In the ACL details window, click the Edit button.
+
+![](../static/ISA/accessrules16.png)
+
+- In the Update access rule window, you can edit the Destination, Destination Type, Source, and Source Type fields. You can add or delete the user, user group, application, or application group by clicking the “x” icon. 
+
+![](../static/ISA/accessrules17.png)
+
+- Click Update to save the change.
+
+![](../static/ISA/accessrules18.png)
+
+**Add Access Rules in Bulk**
+
+This option allows the administrator to add a large number of access rules at once. 
+
+Supported fields in the file are:
+
+- **Name** – A name for the access rule.
+- **Source Type** – Either user or user group.
+- **Source** – Enter the name of the users or user groups separated by commas. 
+- **Destination Type** – Either application or application group.
+- **Destination** – If Destination Type is set to Application Group, enter the name of the application groups separated by commas.. If Destination Type is set to Application, leave the field blank. 
+- **IP Address** – If Destination Type is set to Application, enter the IP addresses of remote resources separated by commas. If Destination Type is set to Application Group, leave the field blank. 
+- **Services** - If Destination Type is set to Application, enter the port numbers of remote resources separated by commas. If Destination Type is set to Application Group, leave the field blank.
+
+- On the Access Rules page, click the Add button.
+    
+![](../static/ISA/accessrules19.png)
+
+- Under Bulk upload Access Rule, click Download Sample CSV.
+
+![](../static/ISA/accessrules20.png)
+
+- Open the file using a spreadsheet application.
+
+![](../static/ISA/accessrules21.png)
+
+- The sample CSV file is filled with sample values. Enter your information as per the samples provided.
+
+![](../static/ISA/accessrules22.png)
+
+- Enter the information in their respective fields and save it.
+
+![](../static/ISA/accessrules23.png)
+
+- Under Upload the file, click Choose File and select the file from the saved location.
+
+![](../static/ISA/accessrules24.png)
+
+- Click Upload.
+
+![](../static/ISA/accessrules25.png)
+
+- In the Uploaded Access Rules window, review the information and click Save ACLs.
+
+![](../static/ISA/accessrules26.png)
+
+- The newly created access rules are listed on the page.
+
+![](../static/ISA/accessrules27.png)
+
+**Download Access Rules List** 
+
+ISA web portal administrators can download the complete list of access rules by clicking on the CSV button on the Access Rules page. An email with the link to download the file in CSV format is sent to the logged-in administrator’s email address. The file has the following information:
+
+- **Name** – Names of the access rule.
+- **Source Type** – Either user or user group.
+- **Source** –Name of the users or user groups. 
+- **Destination Type** – Either application or application group.
+- **Destination** – If Destination Type is Application Group, the names of the application groups. If Destination Type is set to Application, the IP addresses and service names of the applications separated by hyphens.
+
+- On the Access Rules page, click the CSV button at the top.
+
+![](../static/ISA/accessrules28.png)
+
+- A message that an email is scheduled to be sent to the administrator’s email address is displayed.
+
+![](../static/ISA/accessrules29.png)
+
+- Click the download link within the email.
+
+![](../static/ISA/accessrules30.png)
+
+- View the file in a spreadsheet application.
+
+![](../static/ISA/accessrules31.png)
+
+**Delete Access Rules**
+
+On the Access Rules page, enable the check box alongside the access rules you want to delete. 
+
+![](../static/ISA/accessrules32.png)
+
+- Click the Delete button at the top.
+
+![](../static/ISA/accessrules33.png)
+
+- On the pop-up window, click Yes, Delete it!.
+
+![](../static/ISA/accessrules34.png)
+
+- On the bottom left of the page, the message ACLs have been scheduled to be deleted is displayed. 
+
+![](../static/ISA/accessrules35.png)
+
+**Navigating the Access Rule List**
+
+The Access Rules page allows easy pagination for viewing a large number of access rules. You can view the access rules by using the navigation control bar at the top right of the page.
+
+Click the drop-down box to select the number of rules to be displayed on the Access Rules page. By default, it is set to display 10 rules. You can change it to display either 30 or 50 rules. 
+
+![](../static/ISA/sessionlog6.png)
+
+Click the Next button to view the next page of rules. Click the Prev button to view the previous page. 
+
+![](../static/ISA/sessionlog7.png)
+
+You can search access rules by name by entering it in the search box. 
+
+![](../static/ISA/accessrules36.png)
+

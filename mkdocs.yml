@@ -175,6 +175,7 @@ nav:
           - Audit Logs: ZeroTrustAccessGovEdition/017-auditlog.md
           - Event Stream Profile: ZeroTrustAccessGovEdition/018-eventstream.md
           - Email Alerts and Scheduled Reports: ZeroTrustAccessGovEdition/email-alerts.md
+          - Reporting, Dashboards and Export: ZeroTrustAccessGovEdition/reporting-and-export.md
       - Multi-factor Authentication (MFA):
           - Configure MFA: ZeroTrustAccessGovEdition/mfa-configure.md
           - MFA Login: ZeroTrustAccessGovEdition/mfa-login.md

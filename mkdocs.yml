@@ -156,6 +156,7 @@ nav:
           - Configure Multi Factor Authentication: ZeroTrustAccessGovEdition/011-twofactor.md
           - RADIUS Authentication: ZeroTrustAccessGovEdition/ztaa-radius-server.md
           - LDAP Authentication: ZeroTrustAccessGovEdition/ldap-authentication.md
+          - Directory Queries and the Login Identifier: ZeroTrustAccessGovEdition/directory-query.md
           - Directory Authentication and MFA: ZeroTrustAccessGovEdition/directory-mfa.md
           - Self Service AD Password Reset: ZeroTrustAccessGovEdition/SelfServiceADPwdReset.md
       - Perimeter Management:

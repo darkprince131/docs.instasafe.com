@@ -223,6 +223,7 @@ nav:
           - Based on Device Binding: ZeroTrustAccessGovEdition/devicebinding.md
           - Based on Device Posture: ZeroTrustAccessGovEdition/deviceposture.md
           - Identifying the Browser and the Device: ZeroTrustAccessGovEdition/browser-identity.md
+          - Device Binding for Browser Users: ZeroTrustAccessGovEdition/device-binding-clientless.md
           - Microsoft O365 & SAML apps: ZeroTrustAccessGovEdition/contextualaccess-o365.md
       - Conditional Access:
           - Conditional Access with MDM: ZeroTrustAccessGovEdition/mobile-device-management.md      

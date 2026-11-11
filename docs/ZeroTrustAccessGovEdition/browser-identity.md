@@ -3,62 +3,86 @@ comments: true
 ---
 # Identifying the Browser and the Device
 
-The platform identifies what a user is connecting from, not only who they are. Two
-mechanisms do this, and they apply to different access modes.
+A device check is a named rule that states what the endpoint must look like. **BrowserID**
+is one of the check types, so "which browser is this, and which version" is a condition the
+platform evaluates before access is allowed - not an attribute that is merely recorded.
 
-## Device posture attributes
+## The browser identity check
 
-Device posture is evaluated against attributes collected from the endpoint. The set
-includes, among others:
+**Devices & Checks → Device Checks** holds the rules. A BrowserID rule carries the
+operating system it applies to and the browser or browsers that satisfy it, by name and
+version:
 
-| | |
+![Device checks filtered to BrowserID](../static/devicecheck/browserid-checks.png)
+
+A single rule can list several acceptable browsers, separated by `|` - for example
+`safari 26.4 | safari 18.5 | Microsoft Edge 145.0.3850.71 | Google Chrome 145.0.7732.117` -
+so one rule can express "any of our approved browsers, at or above these builds".
+
+Rules are created per operating system, so Windows, macOS, Linux, Android and iOS can each
+carry their own browser requirement.
+
+## The full set of checks
+
+BrowserID sits alongside the rest of the endpoint checks. The complete list in the console:
+
+![Adding a device check, with the check types listed](../static/devicecheck/device-check-types.png)
+
+| Group | Check types |
 |---|---|
-| **Browser ID** | Identifies the browser the session is using |
-| **UA Suffix** | The user-agent suffix |
-| OS Family, OS Build Version, OS Major and Minor Version | The operating system |
-| System Serial Number, Disk Serial Number, Motherboard ID, Mac Address | Hardware identity |
-| Certificate Thumbprints | Certificates present on the device |
-| System Domain Name | Domain membership |
-| AntiVirus Installed / Enabled / Updated Name, Windows Hotfixes | Security state |
-| IP Address, Geolocation, Country Code | Where the device is |
-| Application, Application Access Time | What is being reached, and when |
+| Malware protection | `Antivirus`, `AntiVirusStatus`, `AntiVirusLastUpdate`, `SEPLastAVUpdate`, `AntiSpyWare`, `AntiSpywareStatus` |
+| Host hardening | `Firewall`, `FirewallStatus`, `BitLocker` |
+| Identity of the machine | `BrowserID`, `OS`, `OSName`, `OS Version`, `ServicePack`, `Hotfix`, `TenantId` |
+| Management state | `InDomain`, `DomainName`, `mdm` |
+| Files, processes, registry | `FileExists`, `FileNotExists`, `ProcessRunning`, `ProcessNotRunning`, `RegistryKeyExists` |
 
-A posture profile is built as a dataset and attached to an access policy, so the check is
-applied to the users and applications that policy covers rather than globally. See
-[Based on Device Posture](deviceposture.md).
+Each rule names the operating system it applies to; the list covers Microsoft Windows,
+macOS, iOS, Android, ChromeOS and the Linux distributions.
 
-In the console, device checks are configured as individual check types - antivirus and its
-status and last update, antispyware, firewall and its status, BitLocker, domain membership,
-hotfixes, service pack, OS and OS version, MDM enrolment, a named process running or not
-running, a file present or absent, a registry key, and browser identity among them.
+## How the checks reach a browser session
 
-## Which mode each applies to
+Checks are performed on the endpoint by **InstaCheck**, which runs locally alongside the
+browser. It is a small download and is not the full access agent.
 
-Posture enforcement as described on the posture page gates **agent-based** access: a device
-that fails a compliance rule is prevented from connecting through the agent.
+Turn on **Device Compliance for Web Access** in **User Settings → Access Controls**:
 
-**Clientless access performs fewer posture validations than agent-based access** - stated
-plainly in [Architecture](002-architecture.md) - because a browser cannot inspect the host
-the way an installed agent can. What the platform does identify for a browser session is
-recorded regardless:
+![Device Compliance for Web Access](../static/devicecheck/device-compliance-web-access.png)
 
-- the **browser** and the **platform** used for the session, shown to the user on their own
-  dashboard for both the current and previous session, and held in the session record
-- the **public IP** and **country** the session came from - see
-  [Restricting Access by Public IP](wan-ip-restriction.md)
+With it enabled, a browser session is admitted only once the endpoint answers. If nothing
+answers, the user is stopped at a device-status gate rather than reaching the applications,
+and is offered the download for the platform they are on:
 
-## Acting on a change
+![The device status gate](../static/devicecheck/device-status-gate.png)
 
-Identification is only useful if something happens when it changes. **Browser Switch** and
-**Platform Switch** are risk types: if the browser or operating system differs from what was
-seen before, the risk profile's action runs - an administrator alert, denial, suspension, or
-disconnection. **Device Bind Failure** and **Device Check Failure** are risk types in the
-same way.
+InstaCheck is published for Microsoft Windows, macOS and Linux as `.msi`, `.pkg`, `.deb`
+and `.rpm`, with the mobile applications covering iOS and Android.
 
-So a browser identity that changes unexpectedly is not merely logged; it can refuse the
-session. See
-[Account Lockout, Idle Timeout and Forced Logout](session-controls.md) for the risk types
-and their actions.
+Because the checks are performed on the endpoint and not inferred from the browser, a
+clientless session with InstaCheck running is subject to the same device checks as an
+agent session - browser identity among them.
 
-The User Settings page also carries a **Device Compliance for Web Access** setting, which
-brings device compliance to bear on browser-based access.
+## Attaching the checks to users
+
+Device checks are enabled per user group. In **Users & Groups → User Groups**, a group
+carries **Device checks** as one of its actions, alongside **Device Binding**, **Geo
+Binding**, **IP Restriction** and the rest:
+
+![User group actions](../static/devicebind/usergroup-actions.png)
+
+Checks apply to the users in the groups where the action is enabled, so a strict browser
+requirement can be placed on the group that reaches sensitive applications without
+constraining everyone.
+
+## What is recorded, and what happens on a mismatch
+
+Every session records the browser, the platform, the public IP and the country, and those
+are visible in the session and access logs - see
+[Last Login, and Access by Day and Time](last-login-and-time.md).
+
+Separately from the checks, **Browser Switch** and **Platform Switch** are available as risk
+types, so a browser or operating system that differs from the one previously seen for that
+user can raise an alert, deny the access, suspend the user or disconnect the session. See
+[Email Alerts and Scheduled Reports](email-alerts.md).
+
+A device check and a risk type answer different questions. The check asks whether the
+endpoint is acceptable at all. The risk type asks whether it is the same one as last time.

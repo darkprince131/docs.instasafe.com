@@ -33,10 +33,17 @@ use when something looks wrong. See [Audit Logs](017-auditlog.md).
 
 ## Account lockout
 
-Repeated failed access attempts cause the account and the source address to be blocked.
-Blocks are listed on the **Blocked Users** page under Users & Groups:
+Repeated failed sign-in attempts lock the account out. The user is told so at the sign-in
+page and cannot try again until the block lifts:
 
-![The Blocked Users page, listing IP, username, blocked at and blocked until](../static/sessioncontrols/blocked-users.png)
+![The sign-in page refusing further attempts](../static/sessioncontrols/lockout-message.png)
+
+> Please try after some time as you have exhausted the allowed number of attempts
+
+The block is recorded on the **Blocked Users** page under Users & Groups, against both the
+account and the address the attempts came from:
+
+![A blocked account on the Blocked Users page, with the time the block was applied and the time it lifts](../static/sessioncontrols/blocked-row.png)
 
 | Column | What it holds |
 |---|---|
@@ -45,8 +52,9 @@ Blocks are listed on the **Blocked Users** page under Users & Groups:
 | **Blocked At** | When the block started |
 | **Blocked Until** | When it lifts by itself |
 
-A block therefore expires on its own, and an administrator can release one early by
-selecting it and clicking **Unblock**. The list exports to CSV.
+A block therefore expires on its own - in the case above it was applied at 11:35:12 and
+lifted at 11:39:45, a little under five minutes later - and an administrator can release one
+early by selecting it and clicking **Unblock**. The list exports to CSV.
 
 ### Policy response to failed attempts
 

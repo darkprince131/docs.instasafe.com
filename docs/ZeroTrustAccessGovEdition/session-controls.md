@@ -56,6 +56,14 @@ A block therefore expires on its own - in the case above it was applied at 11:35
 lifted at 11:39:45, a little under five minutes later - and an administrator can release one
 early by selecting it and clicking **Unblock**. The list exports to CSV.
 
+### Setting the threshold and the block period
+
+How many failed attempts are allowed before a block, and how long that block lasts, are set
+per tenant in the platform configuration. They are not fields in the console, so they are
+not changed by an administrator day to day; they are set for the deployment and apply to
+every account in it. To have either value changed for your tenant, raise it with InstaSafe
+support - see [Support Ticket](025-supportticket.md).
+
 ### Policy response to failed attempts
 
 Lockout is not the only answer available to failed authentication. A **risk profile** can

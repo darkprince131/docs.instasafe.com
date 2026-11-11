@@ -1,5 +1,7 @@
 ---
 comments: true
+search:
+  exclude: true
 ---
 # Split Tunnel and Full Tunnel
 

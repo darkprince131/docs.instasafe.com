@@ -1,5 +1,7 @@
 ---
 comments: true
+search:
+  exclude: true
 ---
 # Account Lockout, Idle Timeout and Forced Logout
 

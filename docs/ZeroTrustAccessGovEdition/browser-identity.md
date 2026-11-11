@@ -1,5 +1,7 @@
 ---
 comments: true
+search:
+  exclude: true
 ---
 # Identifying the Browser and the Device on Web Access
 

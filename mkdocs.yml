@@ -223,6 +223,7 @@ nav:
           - Device Authorization: ZeroTrustAccessGovEdition/deviceauthorization.md
           - Domain Joining: ZeroTrustAccessGovEdition/domainjoin.md
           - SAML based SSO: ZeroTrustAccessGovEdition/013-ConfiguringZTAAasSSOwithSAML.md
+          - OAuth 2.0 and OpenID Connect SSO: ZeroTrustAccessGovEdition/oidc-sso.md
           - API based SSO: ZeroTrustAccessGovEdition/apibasedsso.md
           - Always ON: ZeroTrustAccessGovEdition/alwayson.md
           - Passwordless: ZeroTrustAccessGovEdition/passwordless.md

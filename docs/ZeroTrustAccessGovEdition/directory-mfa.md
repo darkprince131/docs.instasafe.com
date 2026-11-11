@@ -37,27 +37,49 @@ An Active Directory or OpenLDAP profile points the platform at the directory:
 More than one directory profile can exist. Users are imported and kept in step with the
 directory - see [Import Users from AD/LDAP](008-importADusers.md).
 
-## MFA for users authenticating against a directory
+## What the user is asked for
 
-Directory authentication is a **primary** authentication method, and the second factor is
-chosen independently of it. The primary methods are Password, **AD** and SAML; the secondary
-methods available are:
+Directory authentication is a **primary** authentication method. The second factor is
+configured separately from it, so a user whose password lives in Active Directory is
+challenged from the same set as any other user.
 
-| Second factor | |
+Once the password has been accepted, the user chooses a method:
+
+![The second factor prompt](../static/mfa/mfa-method-prompt.png)
+
+| On the prompt | What the user does |
 |---|---|
-| **Email OTP** | One-time code by email |
-| **SMS OTP** | One-time code by SMS |
-| **OTP via Phone Call** | One-time code read out on a call |
-| **TOTP** | InstaSafe Authenticator, or any authenticator app |
-| **HOTP** | Counter-based one-time code |
-| **Push Notification** | Approve or deny on the InstaSafe Authenticator app |
-| **WebAuthn (FIDO2 / Passkey)** | Security key or device authenticator |
-| **Security Question & Answer** | |
-| **QR Code** | |
+| **TOTP** | Enters the current code from their authenticator app |
+| **Authenticator** | Approves the sign-in on the InstaSafe Authenticator app |
+| **SMS** | Enters a one-time code sent by text message |
+| **E-mail** | Enters a one-time code sent by email |
+| **Hardware Key** | Presents a FIDO2 security key |
+| **Use Backup Code** | Enters a one-time code from the list issued in advance |
 
-So a user whose password is held in Active Directory can still be challenged with SMS OTP,
-email OTP, push, TOTP or a FIDO2 key. See [Configure MFA](mfa-configure.md) for how the
-global authentication profile and its per-user and per-group exceptions are set.
+The methods offered are the ones the administrator has enabled and the user has enrolled.
+Backup Code is a recovery route rather than a routine factor.
+
+## Where the user enrols
+
+Each user manages their own factors on the **Multi Factor Authentication** page of their
+profile:
+
+![The user's MFA profile page](../static/mfa/mfa-user-profile.png)
+
+| On the page | Enrols |
+|---|---|
+| **Google Authenticator** | TOTP - the user scans a QR code with any authenticator app |
+| **FIDO Keys** | A FIDO2 security key, with a count of the keys already registered |
+| **Instasafe Authenticator** | Push notifications, through the Android or iOS app |
+| **Digital Certificate** | A certificate on the user's machine, set up through the agent |
+| **Backup Codes** | A downloadable list of single-use recovery codes |
+| **InstaSafe OS MFA** | A second factor at Windows computer login, not only at application login |
+
+The administrator can require MFA, see each user's enrolment state and reset it, but cannot
+enrol on a user's behalf - the factor is registered on the user's own device.
+
+See [Configure MFA](mfa-configure.md) for the global authentication profile and its per-user
+and per-group exceptions.
 
 ## Biometric and facial authentication
 

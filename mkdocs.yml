@@ -156,12 +156,14 @@ nav:
           - Configure Multi Factor Authentication: ZeroTrustAccessGovEdition/011-twofactor.md
           - RADIUS Authentication: ZeroTrustAccessGovEdition/ztaa-radius-server.md
           - LDAP Authentication: ZeroTrustAccessGovEdition/ldap-authentication.md
+          - Multi-Tenancy: ZeroTrustAccessGovEdition/multi-tenancy.md
           - Directory Queries and the Login Identifier: ZeroTrustAccessGovEdition/directory-query.md
           - Directory Authentication and MFA: ZeroTrustAccessGovEdition/directory-mfa.md
           - Self Service AD Password Reset: ZeroTrustAccessGovEdition/SelfServiceADPwdReset.md
       - Perimeter Management:
           - Gateways: ZeroTrustAccessGovEdition/006agateway.md
           - Create Gateways: ZeroTrustAccessGovEdition/006-creatinggateways.md
+          - Scaling and Connection Distribution: ZeroTrustAccessGovEdition/scaling-and-distribution.md
           - Create Application: ZeroTrustAccessGovEdition/005-creatingapplication.md
           - Add Application to Gateway: ZeroTrustAccessGovEdition/006b-addapptogateway.md
           - What Traffic Goes Through the Tunnel: ZeroTrustAccessGovEdition/tunnel-scope.md

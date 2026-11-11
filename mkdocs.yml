@@ -180,6 +180,7 @@ nav:
       - Auditing and Monitoring:
           - Audit Logs: ZeroTrustAccessGovEdition/017-auditlog.md
           - Event Stream Profile: ZeroTrustAccessGovEdition/018-eventstream.md
+          - Real-Time Log Streaming: ZeroTrustAccessGovEdition/realtime-log-streaming.md
           - Email Alerts and Scheduled Reports: ZeroTrustAccessGovEdition/email-alerts.md
           - Reporting, Dashboards and Export: ZeroTrustAccessGovEdition/reporting-and-export.md
       - Multi-factor Authentication (MFA):
@@ -203,6 +204,7 @@ nav:
               - ZTAA Agent: ZeroTrustAccessGovEdition/ztaa-agent.md
           - Mobile agents: ZeroTrustAccessGovEdition/mobileagent.md  
       - Clientless Web Access: ZeroTrustAccessGovEdition/clientless-web-access.md
+      - Supported Browsers: ZeroTrustAccessGovEdition/supported-browsers.md
       - Custom Application Icons: ZeroTrustAccessGovEdition/application-icons.md
       - Agentless Access: ZeroTrustAccessGovEdition/agentless.md
       - Endpoint Controls:

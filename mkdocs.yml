@@ -184,12 +184,14 @@ nav:
           - Configure MFA: ZeroTrustAccessGovEdition/mfa-configure.md
           - MFA Login: ZeroTrustAccessGovEdition/mfa-login.md
           - WebAuthn MFA: ZeroTrustAccessGovEdition/webauthn-fido2-mfa.md
+          - Certificate-Based Authentication: ZeroTrustAccessGovEdition/certificate-authentication.md
           - Security Question MFA: ZeroTrustAccessGovEdition/mfa-security-question.md
           - Recovery Codes MFA: ZeroTrustAccessGovEdition/mfa-recovery-code.md
           - Desktop MFA: ZeroTrustAccessGovEdition/desktop_mfa.md
           - Network Devices MFA: ZeroTrustAccessGovEdition/network_devices_mfa.md
           - Outlook Web Access MFA: ZeroTrustAccessGovEdition/owa_mfa.md
           - Phishing-Resistant MFA: ZeroTrustAccessGovEdition/mfa-phishing-resistant.md
+          - Protecting the Sign-In Page: ZeroTrustAccessGovEdition/login-protection.md
           - Conditional MFA: ZeroTrustAccessGovEdition/mfa-conditional.md
       - Single Sign-On (SSO):
           - SAML Single Sign-On: ZeroTrustAccessGovEdition/saml-single-sign-on.md

@@ -31,6 +31,67 @@ provider. The sign-in page itself is protected against automated attack; see
 
 No application is listed, and none can be opened, until authentication is complete.
 
+## How a web application is reached
+
+The portal is an authenticating reverse proxy. The application keeps its private address and
+is never published; the user's browser only ever talks to the portal.
+
+### 1. The application's name points at the portal
+
+The organisation's DNS administrators publish a **CNAME** so that the application's own
+hostname resolves to the portal:
+
+```
+app.example.com   CNAME   portal.example.com
+```
+
+A request to `https://app.example.com` therefore arrives at the portal. Where the change is
+wanted for a limited set of users rather than everyone, the same entry can be made in the
+hosts file on those users' machines instead of in public DNS.
+
+### 2. The user is authenticated and authorised
+
+The request reaches the portal through the perimeter firewall on **HTTPS 443**. The portal
+authenticates the user and checks whether that user is entitled to this application before
+anything is forwarded.
+
+A user who is already signed in can instead launch the application from its tile on the
+portal, which is the same check reached a different way.
+
+### 3. The portal proxies the request over the tunnel
+
+The portal holds a single, persistent tunnel to the controller. Once the user is
+authenticated and authorised, the portal forwards the HTTPS request over that tunnel to the
+controller, which stitches it through to the gateway serving the application, and the
+gateway reaches the application over HTTPS on its private address. The response returns
+along the same path.
+
+| Hop | |
+|---|---|
+| User's browser | `https://app.example.com`, no agent installed |
+| Public DNS | CNAME to the portal |
+| Firewall | HTTPS 443 into the DMZ |
+| **User portal** | Authentication, entitlement check, reverse proxy |
+| *persistent tunnel* | |
+| **Controller** | Trust broker; checks policy and stitches the tunnels |
+| **Gateway** | Terminates the tunnel and reaches the application |
+| Internal web application | Private address, HTTPS |
+
+The controller and gateway sit in the protected VLAN with the database and the
+administration console; only the portal is reachable from outside.
+
+### What this means in practice
+
+- The application's private address is never exposed, and its public name resolves to the
+  portal rather than to the application.
+- No agent, plug-in or browser extension is installed to reach it.
+- Nothing is forwarded before the user has been authenticated and found entitled, so an
+  unauthenticated request never reaches the application at all.
+- The gateway serving the application needs HTTPS reach to the application's private
+  address. That is the only network dependency the arrangement adds.
+- Access and event logs record the session and the end user - see
+  [Audit Logs](017-auditlog.md).
+
 ## What the user sees
 
 After signing in, the user lands on a portal with three sections: **Dashboard**,

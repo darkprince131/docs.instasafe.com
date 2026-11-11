@@ -8,7 +8,7 @@ Keeping in mind about the above principles of Zero Trust, Companies have orchest
 
 ### Client Initiated Zero Trust Access
 
-This model uses the Software Defined Perimeter as proposed by the Cloud Security Alliance as its inspiration. This model includes the use of an “Agent” which resides on the client’s machines and connects the client to the required resource after performing necessary security checks and validations defined by the company operating the Zero Trust Network. Such a model can be used to access company resources in private networks and cloud hosted services securely from anywhere in the world. Examples of client-initiated solutions are InstaSafe’s Zero Trust Application Access (ZTAA) and Zero Trust Network Access (ZTNA). ![hi](../static/ztaa/EndPointZTNA.png)
+This model uses the Software Defined Perimeter as proposed by the Cloud Security Alliance as its inspiration. This model includes the use of an “Agent” which resides on the client’s machines and connects the client to the required resource after performing necessary security checks and validations defined by the company operating the Zero Trust Network. Such a model can be used to access company resources in private networks and cloud hosted services securely from anywhere in the world. Examples of client-initiated solutions are InstaSafe’s Zero Trust Application Access (InstaSafe ZTNA) and Zero Trust Network Access (ZTNA). ![hi](../static/ztaa/EndPointZTNA.png)
 
 ### Service Initiated Zero Trust Access
 

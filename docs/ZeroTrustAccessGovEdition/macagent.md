@@ -1,14 +1,14 @@
 ---
 comments: true
 ---
-ZTAA is supported in all latest versions of MacOS. Once the user successfully sets his profile password he can downlaod the agent from the console and install it on his device. Applications to which the user has access to can be accessed through the agent.
+InstaSafe ZTNA is supported in all latest versions of MacOS. Once the user successfully sets his profile password he can downlaod the agent from the console and install it on his device. Applications to which the user has access to can be accessed through the agent.
 
 
 **Steps for Installation**
 
-1. Double-click the downloaded Disk Image File InstaSafe-ZTAA-macOS.dmg to open it and you will see a Finder Window
+1. Double-click the downloaded Disk Image File InstaSafe-InstaSafe ZTNA-macOS.dmg to open it and you will see a Finder Window
 
-2. Drag the App to the Applications Folder to install the ZTAA Client. This step might prompt for Admin credentials
+2. Drag the App to the Applications Folder to install the InstaSafe ZTNA Client. This step might prompt for Admin credentials
 
 3. Wait for the copy process to finish and eject the .dmg (by clicking the eject button in the Sidebar).
 

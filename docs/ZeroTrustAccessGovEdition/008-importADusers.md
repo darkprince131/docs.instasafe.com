@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-ZTAA supports integration with  different IAM services such as [Active Directory](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview), LDAP and Azure Acitve Diretory. Using the directory sync feature, multiple users can be onboarded rapidly via syncing from organisations identity management services. ZTAA can also be used to configure AD as a Primary mode for authentication. 
+InstaSafe ZTNA supports integration with  different IAM services such as [Active Directory](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview), LDAP and Azure Acitve Diretory. Using the directory sync feature, multiple users can be onboarded rapidly via syncing from organisations identity management services. InstaSafe ZTNA can also be used to configure AD as a Primary mode for authentication. 
 
 For provisioning users through Active Directory , a gateway  must be installed in the same subnet as the AD server.
 

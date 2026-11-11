@@ -1,70 +1,113 @@
 ---
 comments: true
 ---
-# Role-Based Application Access Control
+# Contextual Access Control: Device and Browser Identity
 
-Access rules grant application access by **role** rather than by individual. Users are
-grouped by their role in the organisation, the resources that role needs are defined as an
-application group, and a single access rule binds the two. The rule is identity-based: it
-permits access on the strength of who the user is, not on parameters such as the source IP
-address.
+Access is granted on more than identity. Before a user is let in, the platform can require
+that the device they are using is one the organisation accepts - the right device, in the
+right place, patched, protected, and running an approved browser.
 
-Rules are listed and created on the **Access Rules** page of the console.
+**Device Compliance for Web Access** verifies that a user's device meets the organisation's
+security policy before the user is let into the web portal, instead of relying on username
+and password alone. A device that does not satisfy the configured requirements is refused,
+with the reason stated.
 
-![The Access Rules page](../static/accessrules/access-rules-list.png)
+## How it works
 
-Each row states the rule's source and its destination. Where **Src Type** is *User Group*,
-every member of that group inherits the entitlement.
+1. The user opens the web portal and enters their credentials.
+2. The device compliance check starts.
+3. The **Web Device Compliance Agent** - InstaCheck - validates the device on the endpoint.
+4. If every check passes, the user reaches their dashboard. If any check fails, the login is
+   blocked and the reason shown.
 
-## What a rule holds
+The checks are performed on the endpoint itself, not inferred from the browser, which is why
+a browser session can be held to the same standard as an agent session.
 
-| Field | What it holds |
+## Turning it on
+
+Enable **Device Compliance for Web Access** in **User Settings → Access Controls**:
+
+![Device Compliance for Web Access](../static/devicecheck/device-compliance-web-access.png)
+
+Compliance is then enforced **for users who have Device Bind, Geo Bind or Device Check
+configured at the user or group level**. Enabling the toggle on its own does not impose a
+check that has not been defined; the toggle brings the checks already configured for that
+user or group to bear on web login.
+
+## What is checked on a web login
+
+| Check | What it establishes |
 |---|---|
-| **Name** | A name for the rule. A-Z, a-z, 0-9, up to 50 characters. |
-| **Source Type** | **User**, **User Group** or **Application**. Choosing *User Group* is what makes the rule role-based. |
-| **Source** | The user groups the rule applies to. More than one can be added. |
-| **Destination Type** | **Application Group**, **Application**, **Custom Application**, **URL Filter**, **Content Filter**, **FileType Filter** or **Domain List**. |
-| **Destination** | The application groups the rule covers. More than one can be added. A *Custom Application* is defined in the rule itself, by IP address or network plus one or more ports. |
-| **Elevated Access** | Requires the access to be elevated before it is granted. |
-| **Enable Schedule** | Applies the rule only during a configured schedule. |
-| **Action** | **Allow**, **Deny** or **Bypass**. |
+| **Device Binding** | The user is logging in from a device registered to them. A personal laptop in place of the registered company laptop is refused. |
+| **Geo Binding** | The login comes from a permitted country or location. |
+| **Antivirus** | Endpoint protection is present and active. A disabled Windows Defender fails the check. |
+| **Operating System** | The device runs an approved OS and version - for example, Windows 11 24H2 or later. |
+| **Browser version** | The browser is at or above the configured build. **Google Chrome** and **Microsoft Edge** are the browsers covered by this check. |
 
-## Granting access to a role
+A browser one build below the configured minimum - Chrome 137 against a policy of Chrome 138
+or later - is refused; a browser at or above it is admitted.
 
-1. **Group the users by role.** Create the group on the
-   [Local Groups](../i365customprivateedition/057-Configuring_Local_Groups.md) page, or import it
-   from [Microsoft Active Directory](../i365customprivateedition/070-Configuring_Microsoft_Active_Directory__AD__Integration.md)
-   so that a directory group becomes the role.
-2. **Define what that role reaches.** Pair the addresses or networks with their services on
-   the [Application Groups](../i365customprivateedition/055-Configuring_Application_Groups.md) page.
-   Services are defined under
-   [Application Services](../i365customprivateedition/056-Configuring_Application_Services.md).
-3. **Bind them with one rule.** On the Access Rules page, click **Add**, then set
-   **Source Type** to *User Group*, **Source** to the role, **Destination Type** to
-   *Application Group*, **Destination** to the resources, and **Action** to *Allow*.
+### What the user is told when a check fails
 
-![Adding a role-based access rule](../static/accessrules/add-access-rule.png)
+| Message | Reason | What the user does |
+|---|---|---|
+| **Device Not Registered** | Logging in from an unapproved device | Use the registered device, or ask the administrator to approve the new one |
+| **Geo Location Mismatch** | Location outside the configured policy | Connect from an approved location, or ask for the policy to be updated |
+| **Operating System Version Mismatch** | OS below the minimum required | Upgrade the operating system |
+| **Antivirus Disabled** | No active antivirus protection detected | Enable or install antivirus and retry |
+| **Browser Version Mismatch** | The browser is below the configured build | Update the browser |
 
-Every member of the group inherits the entitlement, and a user who joins or leaves the
-group gains or loses it without the rule being touched. That is the whole point of writing
-the rule against the group rather than against people.
+The refusal names the control that failed, so the user can act on it without raising a
+ticket.
 
-A **Deny** rule is written the same way, and is normally used to carve an exception out of
-a broader allow.
+## The first login
 
-## How rules are applied
+The first time a user signs in with compliance enabled, they are prompted to download the
+**Web Device Compliance Agent**. The download page offers the installer for each supported
+operating system; on Windows the installer is run as administrator.
 
-When an allow rule is saved, the controller configures the route at both ends: it sends the
-route to the user's agent, and the route with its ports to the gateway serving the
-resource. The user does not receive a route to anything no rule grants them.
+![The device status gate](../static/devicecheck/device-status-gate.png)
 
-Rules are evaluated by **specificity** - a more specific rule wins over a less specific one,
-all else being equal. So a rule naming a single address beats a rule naming the network it
-sits in, and a deny on an address beats an allow on that network.
+On the next sign-in the browser asks to open **Insta-Check**, which validates the device
+posture and the geo binding configured for that user, and the sign-in continues.
 
-## Related
+## Where the checks are defined
 
-- [Application Access Time](applicationaccesstime.md) - restricting a rule to particular
-  days and hours
-- [Configuring Access Rules](../i365customprivateedition/054-Configuring_Access_Rules.md) -
-  editing, bulk upload, export and deletion of rules
+A device check is a named rule stating what the endpoint must look like, created in
+**Devices & Checks → Device Checks**. **BrowserID** is one of the check types, and its value
+is a browser name and build:
+
+![Device checks filtered to BrowserID](../static/devicecheck/browserid-checks.png)
+
+A single rule can list several acceptable browsers separated by `|`, so one rule expresses
+"any of our approved browsers, at or above these builds", and rules are created per
+operating system.
+
+BrowserID sits alongside the rest of the endpoint checks:
+
+![Adding a device check, with the check types listed](../static/devicecheck/device-check-types.png)
+
+| Group | Check types |
+|---|---|
+| Malware protection | `Antivirus`, `AntiVirusStatus`, `AntiVirusLastUpdate`, `SEPLastAVUpdate`, `AntiSpyWare`, `AntiSpywareStatus` |
+| Host hardening | `Firewall`, `FirewallStatus`, `BitLocker` |
+| Identity of the machine | `BrowserID`, `OS`, `OSName`, `OS Version`, `ServicePack`, `Hotfix`, `TenantId` |
+| Management state | `InDomain`, `DomainName`, `mdm` |
+| Files, processes, registry | `FileExists`, `FileNotExists`, `ProcessRunning`, `ProcessNotRunning`, `RegistryKeyExists` |
+
+Checks are enabled per user group, as the **Device checks** action - see
+[Device Binding for Browser Users](device-binding-clientless.md).
+
+## What is recorded, and what happens on a change
+
+Every session records the browser, the platform, the public IP and the country, visible in
+the session and access logs - see
+[Last Login, and Access by Day and Time](last-login-and-time.md).
+
+Separately from the checks, **Browser Switch** and **Platform Switch** are available as risk
+types, so a browser or operating system that differs from the one previously seen for that
+user can raise an alert, deny the access, suspend the user or disconnect the session. See
+[Email Alerts and Scheduled Reports](email-alerts.md).
+
+A device check and a risk type answer different questions. The check asks whether the
+endpoint is acceptable at all. The risk type asks whether it is the same one as last time.

@@ -1,9 +1,9 @@
 ---
 comments: true
 ---
-ZTAA besides enforcing strict access control can also restrict user access to the ZTAA agent and agentless web application from certain IP/IP range. The admin can blacklist or whitelist IP/IP range for individual user/user group/organization. Whitelisting will enable the user to login from the whitelisted IP and block access from all other IP's whereas blackisting will restrict access from a particular IP/IP range.
+InstaSafe ZTNA besides enforcing strict access control can also restrict user access to the the agent and agentless web application from certain IP/IP range. The admin can blacklist or whitelist IP/IP range for individual user/user group/organization. Whitelisting will enable the user to login from the whitelisted IP and block access from all other IP's whereas blackisting will restrict access from a particular IP/IP range.
 
-Use case for whitelisting IP can be when the organization wants that the users can access the ZTAA agent or agentless web application only when they are trying to access it from the office LAN.
+Use case for whitelisting IP can be when the organization wants that the users can access the the agent or agentless web application only when they are trying to access it from the office LAN.
 
 Steps to enable IP Whitelisting or Blackisting:
 

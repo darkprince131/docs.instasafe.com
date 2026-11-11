@@ -62,7 +62,7 @@ traffic or legitimate application communication is allowed in the network. This 
 the attack surface. 
 
 
-Read more how Instasafe ZTAA secures enterprises  resources by minimizing insider threat [here](https://instasafe.com/zero-trust-application-access/). 
+Read more how InstaSafe ZTNA secures enterprises  resources by minimizing insider threat [here](https://instasafe.com/zero-trust-application-access/). 
 
 
 ![](../static/ztaa/Risk_Assessment.svg)
@@ -83,6 +83,6 @@ Further information on the same  can be found in relevant sections of the docume
 |**Access Rules**| Access rules are a set of policies that govern user access to a particular application. The admin can configure access rules to define what resources are accessible to the user and what kind of access to the  particular resource is the user allowed. For example an HR employee may not have access to companies CRM applications while a sales user will have http/https access to the same. But an IT user may need SSH connection access to the same server.|
 |**Perimeter**|Perimeter is the virtual boundary between the private and public side of a network. While the public resources are universally accessible, whereas the private Resources are accessible only to authorized individuals. An important characteristic of virtual perimeter is that it varies from person to person depending upon access rules configured for the person.|
 |**Agent**|Agent is a lightweight software module that can be installed on the user device. “Agent”  resides on the client’s machines and connects the client to  the required resource after performing necessary security checks and validations defined by the company operating the Zero Trust Network|
-|**Gateway**|Gateway is a lightweight software module that can be installed on a physical server/VM (which runs in the data centre) or an instance ( in the cloud-hosted data centre). The gateway is the relay point between the user and the application and point of access to all the applications secured by the ZTAA. An Gateway needs to be provisioned at every datacentre/cloud network environment where enterprise application are hosted. |
-|**Auth Profile**| Auth profiles specifies the mode of authentication set for individual users. ZTAA supports authentication via multiple methods such as password, AD, SAML etc. Auth profile settings allows admin to set these for user on organisational, group as well as personal level.| 
+|**Gateway**|Gateway is a lightweight software module that can be installed on a physical server/VM (which runs in the data centre) or an instance ( in the cloud-hosted data centre). The gateway is the relay point between the user and the application and point of access to all the applications secured by the InstaSafe ZTNA. An Gateway needs to be provisioned at every datacentre/cloud network environment where enterprise application are hosted. |
+|**Auth Profile**| Auth profiles specifies the mode of authentication set for individual users. InstaSafe ZTNA supports authentication via multiple methods such as password, AD, SAML etc. Auth profile settings allows admin to set these for user on organisational, group as well as personal level.| 
 

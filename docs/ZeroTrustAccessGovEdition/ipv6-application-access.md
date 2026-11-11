@@ -2,7 +2,7 @@
 comments: true
 ---
 
-To leverage the expansive address space, enhanced security and efficient routing provided by IPv6 addresses, the ZTAA platform supports applications access with IPv6 & IPv4 addresses in a dual stack mode.
+To leverage the expansive address space, enhanced security and efficient routing provided by IPv6 addresses, the the platform supports applications access with IPv6 & IPv4 addresses in a dual stack mode.
 
 ## Steps for configuring applications with IPv6 addresses
 

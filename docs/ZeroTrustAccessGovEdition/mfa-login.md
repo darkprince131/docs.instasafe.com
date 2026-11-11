@@ -13,7 +13,7 @@ The below video illustrates on how users can scan a QR code in their profile to 
 
 ## MFA with push notification in the InstaSafe Authenticator app ##
 
-The Push Notification option of MFA login is available in the InstaSafe Authenticator app. The steps to download and configure the profile in the InstaSafe Authenticator app is available [here](https://docs.instasafe.com/Zero%20Trust%20Application%20Access/026authenticator/). The below video illustrates a login to the ZTAA platform by approving a push notification from the InstaSafe Authenticator app.
+The Push Notification option of MFA login is available in the InstaSafe Authenticator app. The steps to download and configure the profile in the InstaSafe Authenticator app is available [here](https://docs.instasafe.com/Zero%20Trust%20Application%20Access/026authenticator/). The below video illustrates a login to the the platform by approving a push notification from the InstaSafe Authenticator app.
 
 
 ![MFA_PushNotification_Login](../static/ztaa/PushNotification-Login.gif)

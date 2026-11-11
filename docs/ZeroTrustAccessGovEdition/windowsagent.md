@@ -3,7 +3,7 @@ comments: true
 ---
 #### Windows Installation
 
-ZTAA is supported in all latest versions of Windows. Once the user successfully sets his profile password he can downlaod the agent from the console and install it on his device. Applications to which the user has been granted access can be accessed from the agent.
+InstaSafe ZTNA is supported in all latest versions of Windows. Once the user successfully sets his profile password he can downlaod the agent from the console and install it on his device. Applications to which the user has been granted access can be accessed from the agent.
 
 Please ensure the following prerequisites are installed on your system prior to installing
 

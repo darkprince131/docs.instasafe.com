@@ -8,7 +8,7 @@ tags:
 WebAuthn (Web Authentication) is a modern authentication standard that facilitates secure and phishing-resistant login experiences. It can be used as a Multi-Factor Authentication (MFA) method by combining something you have (a hardware security key, a device with biometric sensors, or a smartphone) with another authentication factor (such as a password or PIN).
 
 
-ZTAA supports three types of WebAuthn/FIDO2 authentication:
+InstaSafe ZTNA supports three types of WebAuthn/FIDO2 authentication:
 
 1. Windows Hello
 
@@ -64,14 +64,14 @@ Setting Up Authentication Mode to WebAuthn:
 
 - In the Authentication Profile, keep the Primary Auth as "password," and set the Secondary Auth to "WebAuthn."
 
-The below video illustrates how to register Windows PIN in the ZTAA platform for WebAuthn Secondary Authentication.
+The below video illustrates how to register Windows PIN in the the platform for WebAuthn Secondary Authentication.
 
 ![WebAuthn_Windows_Hello_Registration](../static/ztaa/WebAuthn-Windows-Hello-PIN-Regn.gif)
 
 
-**WebAuthn login to the ZTAA platform with Windows PIN:**
+**WebAuthn login to the the platform with Windows PIN:**
 
-1. Log in to the ZTAA Console with the username and password associated with the WebAuthn registration.
+1. Log in to the the console with the username and password associated with the WebAuthn registration.
 2. Enter your password when prompted.
 3. Select your registered device as Windows PIN.
 4. Enter your Windows PIN.
@@ -86,12 +86,12 @@ Setting Up Authentication Mode to WebAuthn:
 
 - In the Authentication Profile, keep the Primary Auth as "password," and set the Secondary Auth to "WebAuthn."
 
-The below video illustrates how to register YubiKey in the ZTAA platform for WebAuthn Secondary Authentication.
+The below video illustrates how to register YubiKey in the the platform for WebAuthn Secondary Authentication.
 
 ![WebAuthn_Security_Key_Registration](../static/ztaa/WebAuthn-SecurityKey-Regn.gif)
 
 
-**WebAuthn login to the ZTAA platform with Security Key:**
+**WebAuthn login to the the platform with Security Key:**
 
 1. Log in to InstaSafe using the credentials of the user registered with WebAuthn.
 2. Enter your password when prompted.
@@ -106,7 +106,7 @@ The below video illustrates how to register YubiKey in the ZTAA platform for Web
 2. Follow the instructions to scan the QR code through your mobile device.
 
 
-The below video illustrates how to register a mobile device for passkey in the ZTAA platform for WebAuthn Secondary Authentication.
+The below video illustrates how to register a mobile device for passkey in the the platform for WebAuthn Secondary Authentication.
 
 ![WebAuthn_Passkey_Key_Registration](../static/ztaa/WebAuthn-PassKey-Regn.gif)
 
@@ -115,7 +115,7 @@ Setting Up Authentication Mode to WebAuthn:
 
 - In the Authentication Profile, keep the Primary Auth as "password," and set the Secondary Auth to "WebAuthn."
 
-**WebAuthn login to the ZTAA platform using PassKey:**
+**WebAuthn login to the the platform using PassKey:**
 
 1. Log in to InstaSafe using the credentials of the user registered with WebAuthn.
 2. Enter your password when prompted.
@@ -123,9 +123,9 @@ Setting Up Authentication Mode to WebAuthn:
 4. Scan the QR Code from your mobile device.
 5. Once the passcode is entered, the login will be successful.
 
+## Certificate-based authentication, including DSC
 
-
-
-
-
-
+Separately from FIDO2, a **digital certificate** can be required as an authentication factor.
+This covers a Class-3 Digital Signature Certificate held on a hardware USB token and a soft
+certificate installed in the certificate store, and it is configured on the authentication
+profile. See [Certificate-Based Authentication](certificate-authentication.md).

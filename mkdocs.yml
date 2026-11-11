@@ -148,7 +148,7 @@ nav:
           - Getting Started: ZeroTrustAccessGovEdition/003-gettingstarted.md
       - Identity Management:
           - Create User: ZeroTrustAccessGovEdition/004-creatingusers.md
-          - Create User Group: ZeroTrustAccessGovEdition/004b-usergroup.md
+          - User Groups and Role-Based Access: ZeroTrustAccessGovEdition/004b-usergroup.md
           - Authentication Profile: ZeroTrustAccessGovEdition/authenticationprofile.md
           - Import Users from AD/LDAP: ZeroTrustAccessGovEdition/008-importADusers.md
           - Import Users from Azure AD: ZeroTrustAccessGovEdition/009-AzureADsync.md
@@ -172,7 +172,8 @@ nav:
           - View Device Details: ZeroTrustAccessGovEdition/005a-devicedetails.md
           - Package Deployment: ZeroTrustAccessGovEdition/packagedeployer.md
       - Access Policies:
-          - Role-Based Access Rules: ZeroTrustAccessGovEdition/007-accesscontrol.md
+          - Device and Browser Identity: ZeroTrustAccessGovEdition/007-accesscontrol.md
+          - Device and Browser Identity (previous version): ZeroTrustAccessGovEdition/007-accesscontrol-old.md
       - Advanced Configurations:
           - Data Management: ZeroTrustAccessGovEdition/019-datamanagement.md
           - Session Controls and Account Lockout: ZeroTrustAccessGovEdition/session-controls.md
@@ -181,6 +182,7 @@ nav:
       - Auditing and Monitoring:
           - Audit Logs: ZeroTrustAccessGovEdition/017-auditlog.md
           - Event Stream Profile: ZeroTrustAccessGovEdition/018-eventstream.md
+          - Event Stream Profile (previous version): ZeroTrustAccessGovEdition/018-eventstream-old.md
           - Real-Time Log Streaming: ZeroTrustAccessGovEdition/realtime-log-streaming.md
           - Email Alerts and Scheduled Reports: ZeroTrustAccessGovEdition/email-alerts.md
           - Reporting, Dashboards and Export: ZeroTrustAccessGovEdition/reporting-and-export.md
@@ -215,7 +217,8 @@ nav:
           - Block Internet: ZeroTrustAccessGovEdition/internetcontrol.md
           - Clipboard control: ZeroTrustAccessGovEdition/clipboardcontrol.md
           - Chrome control: ZeroTrustAccessGovEdition/chromecontrols.md
-          - Inactivity Timeout: ZeroTrustAccessGovEdition/inactivity_timeout.md
+          - Account Lockout, Idle Timeout and Forced Logout: ZeroTrustAccessGovEdition/inactivity_timeout.md
+          - Inactivity Timeout (previous version): ZeroTrustAccessGovEdition/inactivity_timeout-old.md
           - InstaSafe Stick: ZeroTrustAccessGovEdition/USBstick.md
       - Contextual Access:
           - Application Access Time: ZeroTrustAccessGovEdition/applicationaccesstime.md
@@ -231,7 +234,8 @@ nav:
       - Application Access:
           - IPv6 Application Access: ZeroTrustAccessGovEdition/ipv6-application-access.md
       - Use Cases:
-          - Secure Access: ZeroTrustAccessGovEdition/secureaccess.md
+          - Split Tunnel and Full Tunnel: ZeroTrustAccessGovEdition/secureaccess.md
+          - Secure Access (previous version): ZeroTrustAccessGovEdition/secureaccess-old.md
           - Restrict Access: ZeroTrustAccessGovEdition/restrict_access.md
           - Restricting Access by Public IP: ZeroTrustAccessGovEdition/wan-ip-restriction.md
           - Device Authorization: ZeroTrustAccessGovEdition/deviceauthorization.md

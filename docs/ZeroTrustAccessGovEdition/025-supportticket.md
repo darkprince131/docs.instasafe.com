@@ -12,7 +12,7 @@ Please raise a ticket with below specific information so as to resolve the ticke
 - Error Screenshots & Error Messages
 - Details of Agent & OS version
 - Log files – please mentioned the procedure for all WIN, MacOS and Linux.
-- To raise a support ticket please drop a mail to support@instasafe.com with a screenshot of the error and ZTAA log file.
+- To raise a support ticket please drop a mail to support@instasafe.com with a screenshot of the error and InstaSafe ZTNA log file.
 - Contact information on how to reach you.
 
 
@@ -38,7 +38,7 @@ Support Includes
 
 - Initial Triaging and Troubleshooting of the problem
 - Bugs and Break Fixes
-- ZTAA Console Configurational Questions
+- the console Configurational Questions
 - Product & Best Practices Questions
 - Product Releases Information
 

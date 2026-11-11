@@ -1,13 +1,13 @@
 ---
 comments: true
 ---
-Device authorization is a feature that allows administrators to review and approve or reject new devices before they can access enterprise applications from the ZTAA agent. This will ensure that only trusted devices upon approval by the administrator, can access enterprise applications from the ZTAA agent.
+Device authorization is a feature that allows administrators to review and approve or reject new devices before they can access enterprise applications from the the agent. This will ensure that only trusted devices upon approval by the administrator, can access enterprise applications from the the agent.
 
 **Enable device authorization for your organization** 
 
-The device authorization feature can be enabled from the ZTAA console by an Admin. ZTAA provides multiple options to the Admins for the device authorization rule implementation.
+The device authorization feature can be enabled from the InstaSafe ZTNA console by an Admin. InstaSafe ZTNA provides multiple options to the Admins for the device authorization rule implementation.
 
-Rules available in ZTAA for device authorization implementations:
+Rules available in InstaSafe ZTNA for device authorization implementations:
 
 - Allow First Device
 
@@ -20,7 +20,7 @@ Rules available in ZTAA for device authorization implementations:
 
 ![](../static/ztaa/devicebinding_allowdesktopmobile.png)
 
-To enable device authorization, ZTAA administrator will have to perform the below steps.
+To enable device authorization, InstaSafe ZTNA administrator will have to perform the below steps.
 
 1. Navigate to Identity Management.
 2. Click on User Groups.
@@ -30,13 +30,13 @@ To enable device authorization, ZTAA administrator will have to perform the belo
 6. Click on the checkbox for the Device Authorization rule which you would like to be enforced.
 
 
-**Authorize devices from the ZTAA console** 
+**Authorize devices from the the console** 
 
-Once Device Binding is enabled for a User Group, depending on the device authorization rule set, users when they try to access the ZTAA agent from their device will see a notification that their device is awaiting approval from Admin. Devices awaiting approval cannot access enterprise applications until they are authorized by the Admin.
+Once Device Binding is enabled for a User Group, depending on the device authorization rule set, users when they try to access the the agent from their device will see a notification that their device is awaiting approval from Admin. Devices awaiting approval cannot access enterprise applications until they are authorized by the Admin.
 
 ![](../static/ztaa/Device_Approval_Msg_User.png)
 
-Devices awaiting approval by the Admin can be viewed in the ZTAA console.
+Devices awaiting approval by the Admin can be viewed in the the console.
 
 ![](../static/ztaa/Device_Approval_Admin.png)
 
@@ -46,15 +46,15 @@ Devices awaiting approval by the Admin can be viewed in the ZTAA console.
 4. Click on Edit.
 5. Select “Approve” or “Reject” for the devices awaiting approval.
 
-If the device is approved by the admin then users can access the applications from the ZTAA agent. If the device is rejected by the Admin then users will get a message that their request was rejected by the Admin when they login to the ZTAA agent.
+If the device is approved by the admin then users can access the applications from the the agent. If the device is rejected by the Admin then users will get a message that their request was rejected by the Admin when they login to the the agent.
 
 ![](../static/ztaa/Device_Approval_Rejected.png)
 
-The details of all the devices which try to login to the ZTAA agent are captured and are available to the Admin for review in the console. Admin have the option to block any device.
+The details of all the devices which try to login to the the agent are captured and are available to the Admin for review in the console. Admin have the option to block any device.
 
 ![](../static/ztaa/Device_Block_Admin.png)
 
-Admins can also view the details of all the devices which are used by each user to login to the ZTAA agent. Admin can block or unblock any device for any particular user.
+Admins can also view the details of all the devices which are used by each user to login to the the agent. Admin can block or unblock any device for any particular user.
 
 ![](../static/ztaa/Device_Block_User.png)
 

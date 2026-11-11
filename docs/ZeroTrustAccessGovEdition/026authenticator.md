@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-Instasafe ZTAA supports integration with a wide range of authenticator applications. The user can configure Instasafe Authenticator or any other authenticator application suitable to the user. An authenticator application serves as an alternative to OTP received by mail or SMS and ensures users are able to conveniently login. 
+InstaSafe ZTNA supports integration with a wide range of authenticator applications. The user can configure Instasafe Authenticator or any other authenticator application suitable to the user. An authenticator application serves as an alternative to OTP received by mail or SMS and ensures users are able to conveniently login. 
 
 #### Configuring Instasafe Authenticator
 
@@ -32,7 +32,7 @@ Click on Authenticate Button.
 
 4. Click on the button at the bottom right to add your profile.
 
-5. Select a ISA/ZTAA profile and enter your company’s domain name.
+5. Select a ISA/InstaSafe ZTNA profile and enter your company’s domain name.
 
 6. Enter your username and password and received "SMS OTP".
  
@@ -58,7 +58,7 @@ Once your Identity is successfully verified, your profile will be added and disp
 
 #### Configuring any  authenticator by Scanning QR code.
 
-User can configure any other application such as Google authenticator or Microsoft authenticator to be used with ZTAA.
+User can configure any other application such as Google authenticator or Microsoft authenticator to be used with InstaSafe ZTNA.
 
 Please follow the steps below for configuring authenticator application.
 
@@ -66,9 +66,9 @@ Please follow the steps below for configuring authenticator application.
 
 2. Scan the QR code with the authenticator application.
 
-3. Enter the 6 digit code obtained in the application  in the **OTP** field of ZTAA console and click on Verify.
+3. Enter the 6 digit code obtained in the application  in the **OTP** field of the console and click on Verify.
 
-4. After successful verification the application is ready to be used with ZTAA.
+4. After successful verification the application is ready to be used with InstaSafe ZTNA.
 
 5. You can verify by trying to logging in into the application with the OTP from authenticator application.
 

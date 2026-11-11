@@ -2,7 +2,7 @@
 comments: true
 ---
 
-The functioning of InstaSafe ZTAA is in accordance to the Client-Gateway based model in Software Defined Perimeter specification as proposed by the Cloud Security Alliance (CSA). It is a client-initiated zero trust solution which creates a secure tunnel between the client and the server with additional features like Multi-Factor Authentication, SSO and integration with SAML for third party applications.
+The functioning of InstaSafe ZTNA is in accordance to the Client-Gateway based model in Software Defined Perimeter specification as proposed by the Cloud Security Alliance (CSA). It is a client-initiated zero trust solution which creates a secure tunnel between the client and the server with additional features like Multi-Factor Authentication, SSO and integration with SAML for third party applications.
 
 Access to each application is controlled via independent tunnel ensuring that the user access is contained and thereby eliminating the threats posed by lateral movements within network.
 
@@ -10,7 +10,7 @@ Access to each application is controlled via independent tunnel ensuring that th
 <!--![](../static/ztaa/ZTAA_Arch1.png)-->
 ![](../static/ztaa/ZTAA_Arch2.svg)
 
-Thus once deployed Instasafe ZTAA is able to achieve the following 
+Thus once deployed InstaSafe ZTNA is able to achieve the following 
 
 * Redesign networks into secure micro-perimeters
 
@@ -20,21 +20,21 @@ Thus once deployed Instasafe ZTAA is able to achieve the following
 
 * Improve security detection and response with analytics and automation.
 
-## ZTAA Components
+## Components
 
-ZTAA has four main components which help it achieve the above mentioned objectives.
+InstaSafe ZTNA has four main components which help it achieve the above mentioned objectives.
 
 <!--![ZTAA_Arch1](../static/ztaa/ZTAA_Arch1.png)-->
 
-**1- ZTAA Agent** 
+**1- InstaSafe Agent** 
 
-A Client Agent has to be installed on end user devices for them to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTAA’s access policies are violated or the standards are not met.
+A Client Agent has to be installed on end user devices for them to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  InstaSafe ZTNA’s access policies are violated or the standards are not met.
  
-Note: Clientless access to the resources via browser is also possible,with  fewer secure posture validations.
+Note: Clientless access to the resources via a browser is also possible. Where **Device Compliance for Web Access** is enabled, the endpoint of a browser session is validated on the device itself by the Web Device Compliance Agent, so device binding, geo binding and device checks are enforced on clientless access as they are on agent access. See [Contextual Access Control: Device and Browser Identity](007-accesscontrol.md).
 
 **2- Controllers** 
 
-Controllers are the decision making components in ZTAA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. ZTA Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP)
+Controllers are the decision making components in InstaSafe ZTNA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. the Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP)
 
 **3- Gateways** 
 
@@ -44,18 +44,18 @@ InstaSafe supports four  type of Gateways:
 
 * TCP Gateways - Can be used for accessing web applications by syncing users from active directory.
 
-* RDP Gateways - Can be used for accessing RDP, SSH and Fileshare via Web browser and InstaSafe ZTAA Client.
+* RDP Gateways - Can be used for accessing RDP, SSH and Fileshare via Web browser and InstaSafe ZTNA Client.
 
 * VPN Gateways - Can be used for accessing private applications hosted in private server/data center or cloud.
 
 * Clientless Gateways - Can be used when the admin wants to allow access from browser without installation of user agent. 
 
-**4- Console** is the web interface using which the admin can manage and monitor activity on the ZTAA platform. The console provides an user interface to the admin using which he can manage the other three components. ZTAA console can be accessed from any web browser on any device unless specific restrictions are placed to that effect. 
+**4- Console** is the web interface using which the admin can manage and monitor activity on the the platform. The console provides an user interface to the admin using which he can manage the other three components. the console can be accessed from any web browser on any device unless specific restrictions are placed to that effect. 
 
 
 <!--#### Working -->
 
-<!--![ZTAA Working](../static/ztaa/ztaaworking.png)-->
+<!--![InstaSafe ZTNA Working](../static/ztaa/ztaaworking.png)-->
 ![](../static/ztaa/ztaaworking_latest.svg)
 
 1-  The User logs into the agent with credentials and initiates the connection with the controller. User credentials along with device parameters are passed to the controller.
@@ -64,7 +64,7 @@ InstaSafe supports four  type of Gateways:
 
 3- Once controller has successfully authenticated the user and a tunnel is established between the user device and gateway. 
 
-4- The user can now access applications configured for him/her through ZTAA.
+4- The user can now access applications configured for him/her through InstaSafe ZTNA.
 
 5- All traffic is carried out on AES-256 bit encrypted tunnel.
 
@@ -80,3 +80,20 @@ InstaSafe solution provides both CLI and web-based administrative access to faci
 
 ![](../static/ztaa/Network_Diagram.png)
 
+## Multi-tenancy
+
+One deployment can host several organisations or departments side by side, each with its own
+users, applications, access policies, administrators and audit record, and each able to use
+its own authentication source. See [Multi-Tenancy](multi-tenancy.md).
+
+## Protecting the sign-in page
+
+The sign-in page is protected against automated and brute-force attack: a CAPTCHA challenge
+on the login screen, a configurable lockout after repeated failures, and risk-based
+responses to unusual sign-in behaviour. See [Login Protection](login-protection.md).
+
+## Supported browsers
+
+All modern browsers are supported, including Google Chrome, Microsoft Edge, Mozilla Firefox
+and Apple Safari, with no plug-in or extension installed. Minimum versions are listed in
+[Supported Browsers](supported-browsers.md).

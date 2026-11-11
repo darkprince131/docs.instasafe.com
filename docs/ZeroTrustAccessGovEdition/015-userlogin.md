@@ -23,17 +23,17 @@ Once the profile for an user is created by the admin, the user has to set the pa
 
 **Change Password**
 
-Users can change their password once they login into the ZTAA console or agent.
+Users can change their password once they login into the the console or agent.
 
 Steps to change the password:
 
-1. User needs to clicks on the Profile icon in the top right corner of the ZTAA console or agent.
+1. User needs to clicks on the Profile icon in the top right corner of the the console or agent.
 2. User needs to click on the 'My Profile' option.
-3. User needs to click on the 'Change Password' option in the left menu bar if they have logged into the ZTAA console. If the user has logged into the agent then the option to be selected is "Password".
+3. User needs to click on the 'Change Password' option in the left menu bar if they have logged into the the console. If the user has logged into the agent then the option to be selected is "Password".
 4. User needs to give their current password and new password.
 5. After providing the above details, user needs to click on the 'Update' button.
-6. User session will be invalidated and user will be logged out of either the ZTAA console or agent respectively from wherever they have tried to update their password.
-7. User needs to relogin to the ZTAA console or agent with the new password.
+6. User session will be invalidated and user will be logged out of either the the console or agent respectively from wherever they have tried to update their password.
+7. User needs to relogin to the the console or agent with the new password.
 
 ![image](../static/ztaa/Change_Pwd.png)
 

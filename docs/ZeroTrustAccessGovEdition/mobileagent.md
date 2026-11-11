@@ -18,9 +18,9 @@ mZTNA client is available on android playstore as **InstaSafe mZTNA**. Please fo
 
 2. Open the application page and click on Install.
 
-3. Once installation is complete open the app and login with your ZTAA credentials.
+3. Once installation is complete open the app and login with your InstaSafe ZTNA credentials.
 
-4. ZTAA client setup on your android device is now complete.
+4. InstaSafe ZTNA client setup on your android device is now complete.
 
 The below video illustrates the installation of the mZTNA agent on an Android device.
 
@@ -28,7 +28,7 @@ The below video illustrates the installation of the mZTNA agent on an Android de
 
 #### IOS Installation 
 
-ZTAA client is available on Apple appstore as **InstaSafe mZTNA**. Please follow the below mentioned steps for installing the agent on an iOS device.
+InstaSafe ZTNA client is available on Apple appstore as **InstaSafe mZTNA**. Please follow the below mentioned steps for installing the agent on an iOS device.
 
 1. Open Apple appstore and search for  **InstaSafe mZTNA**.
 
@@ -36,7 +36,7 @@ ZTAA client is available on Apple appstore as **InstaSafe mZTNA**. Please follow
 
 3. Once installation is complete, open the app and login with your credentials.
 
-4. ZTAA client setup on your iOS device is now complete.
+4. InstaSafe ZTNA client setup on your iOS device is now complete.
 
 The below video illustrates the installation of the mZTNA agent on an iOS device.
 

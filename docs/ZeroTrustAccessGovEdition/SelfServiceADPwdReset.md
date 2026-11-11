@@ -2,11 +2,11 @@
 comments: true
 ---
 
-Many organization's do not have any tool that would facilitate users to reset their Active Directory (AD) password by themselves. In such cases, users reach out to their organization's IT Team for assistance. This overhead is addressed by providing the AD users a Self-Service Password Reset feature in ZTAA itself.
+Many organization's do not have any tool that would facilitate users to reset their Active Directory (AD) password by themselves. In such cases, users reach out to their organization's IT Team for assistance. This overhead is addressed by providing the AD users a Self-Service Password Reset feature in InstaSafe ZTNA itself.
 
-In case the user has forgotten their password or their password has expired, they can use this feature to submit a new password. The new password will be updated in the AD server itself, and it can be used for ZTAA logins as well.
+In case the user has forgotten their password or their password has expired, they can use this feature to submit a new password. The new password will be updated in the AD server itself, and it can be used for InstaSafe ZTNA logins as well.
 
-Admins can also enforce new users to reset their Active Directory password from the ZTAA platform by selecting the 'User must change password at next login' option in the Active Directory.
+Admins can also enforce new users to reset their Active Directory password from the the platform by selecting the 'User must change password at next login' option in the Active Directory.
 
 ### Security
 
@@ -19,11 +19,11 @@ Administrators can select any or all of the below options through which they wou
 
 -	Verify Through TOTP
 
-### Prerequisites to enable the feature in ZTAA
+### Prerequisites to enable the feature in InstaSafe ZTNA
 
 1.	Password modification operations are permitted only over LDAPS connections, so a Secure LDAP Connection is required to the Active Directory.
 2.	TCP gateway version 4.4.18 or higher.
-3.	The ‘Reset password option is Enabled’ toggle needs to be enabled by the Administrator in the ZTAA Admin console under My Profile -> Organisation
+3.	The ‘Reset password option is Enabled’ toggle needs to be enabled by the Administrator in the InstaSafe ZTNA Admin console under My Profile -> Organisation
 
 ### Modifications in the Active Directory Sync profile to support password reset
 
@@ -41,7 +41,7 @@ Bind DN & Bind PW: Password modify operations can be done only after a successfu
 
 Base DN For Search: This is required for obtaining the distinguished name of the user from username.
 
-Mobile & Email Attribute Names: These fields are required to be present in the AD server for users to be synced to ZTAA. The values in these are used for MFA for password reset.
+Mobile & Email Attribute Names: These fields are required to be present in the AD server for users to be synced to InstaSafe ZTNA. The values in these are used for MFA for password reset.
 
 Gateways: TCP gateways are required for communication with the AD server. For the password reset feature, TCP gateway 4.4.18 and above is needed.
 
@@ -56,7 +56,7 @@ The below video shows the flow of the Self Service AD Password reset with TOTP.
 ![SelfServiceADPwdReset](../static/ztaa/SelfServiceADPwdRst.gif)
 
 
-The below image shows the prompt received by users in the ZTAA platform, if Admin has selected the 'User must change password at next login' option in the Active Directory. Users will have to proceed to reset their Active Directory password before they can login to the ZTAA platform.
+The below image shows the prompt received by users in the the platform, if Admin has selected the 'User must change password at next login' option in the Active Directory. Users will have to proceed to reset their Active Directory password before they can login to the the platform.
 
 ![SelfServiceADPwdReset](../static/ztaa/ADResetPwdLogin.png)
 

@@ -4,7 +4,7 @@ comments: true
 Getting Started - Admin UI
 --------------------------
 
-The admin ui is the place where every administrative task available to the admin can be performed on the Zero Trust Platform. The admin ui is common for both ZTAA and ZTNA platforms. Admins can manage any number of these platforms with the help of the features provided by this UI.
+The admin ui is the place where every administrative task available to the admin can be performed on the Zero Trust Platform. The admin ui is common for both InstaSafe ZTNA and ZTNA platforms. Admins can manage any number of these platforms with the help of the features provided by this UI.
 The admin UI is driven by a View/Edit toggle to prevent accidental deletions. Modifications to existing entities can only be made in the edit mode.
 
 ### Identity Management
@@ -45,11 +45,11 @@ A username password can be used to authenticate a user into the platform. The ad
 
 ##### Security Assertion Markup Language (SAML)
 
-Instasafe Zero Trust can act as a [SAML](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/013-ConfiguringZTAAasSSOwithSAML/) Service Provider to utilize any third party IDPs to log users into the system. Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the ZTAA platform
+Instasafe Zero Trust can act as a [SAML](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/013-ConfiguringZTAAasSSOwithSAML/) Service Provider to utilize any third party IDPs to log users into the system. Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the the platform
 
 ##### Active Directory ([AD](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/008-importADusers/))
 
-Companies with existing Active Directories can add their servers to the platform and ZTAA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles.
+Companies with existing Active Directories can add their servers to the platform and InstaSafe ZTNA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles.
 In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like,  
 OTPs (Mobile Apps, Email and SMS)  
 Captcha  
@@ -58,7 +58,7 @@ Security Questions
 The User session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
 
 ### Identity Provider
-For third party applications, Instasafe can act as an SAML Identity Provider and provide authenticated identities to a SAML SP to enable Single Sign On  with Instasafe’s user validation and device posture checks. This allows users to login into third party applications by a simple one click interface on the ZTAA Agent and Web Browser.
+For third party applications, Instasafe can act as an SAML Identity Provider and provide authenticated identities to a SAML SP to enable Single Sign On  with Instasafe’s user validation and device posture checks. This allows users to login into third party applications by a simple one click interface on the InstaSafe Agent and Web Browser.
 Directory Sync Profiles
 The user database can be synced with the existing active directory of the company to assign privileges and resource access to various users/user groups. The user groups existing in the active directory can be imported into the  platform to provision resources without the need to create user groups on the platform separately.
 
@@ -67,7 +67,7 @@ The user database can be synced with the existing active directory of the compan
 #### Applications
 
 Administrators have control over the applications and their interaction with the end users. Administrators can restrict access to certain browser features like downloads, clipboard access, can record the screen for auditing purposes and set aliases for the applications.
-The application groups supported by ZTAA are as follows  
+The application groups supported by InstaSafe ZTNA are as follows  
 1. Web Applications  
 2. SSH  
 3. RDP  
@@ -88,7 +88,7 @@ As detailed in the architecture, The gateway is the policy enforcement point of 
 
 #### Access Policies
 
-Access policies are one of the most important security configurations in the ZTAA platform. It is through these policies that the ideas of micro segmentation and granular access control, both cornerstones of a Zero Trust network are achieved on the platform.
+Access policies are one of the most important security configurations in the the platform. It is through these policies that the ideas of micro segmentation and granular access control, both cornerstones of a Zero Trust network are achieved on the platform.
 A basic access policy consists of a user and application in which case the user is allowed access to the application. By default, No user has access to an application when it is added to the gateway. An access rule including the user and the application has to be manually added to allow the user access to that application.
 
 Instasafe’s Zero trust platform allows a lot more configuration with respect to the access policies. In addition to the basic rule allowing a user access to an application, Users groups can be added directly to the policy to access applications. Multiple users can be given access to multiple applications just by the means of a single access rule.
@@ -124,4 +124,4 @@ ZTNA can be configured to allow access to a particular virtual address space whe
 
 #### Application Access
 
-The session captures how an end user interacts with a ZTAA agent and accesses the application. The entire process is automated so that the end user has a simple one click interface to access the application.
+The session captures how an end user interacts with a the agent and accesses the application. The entire process is automated so that the end user has a simple one click interface to access the application.

@@ -1,13 +1,13 @@
 ---
 comments: true
 ---
-# InstaSafe ZTAA Gateway
+# InstaSafe ZTNA Gateway
 
-The InstaSafe ZTAA Gateway is responsible for securing and keeping private all applications and network resources in the data centre(s). It serves as the termination point for the mutual TLS tunnels, where traffic is decrypted and routed to the respective application servers.
+The InstaSafe ZTNA Gateway is responsible for securing and keeping private all applications and network resources in the data centre(s). It serves as the termination point for the mutual TLS tunnels, where traffic is decrypted and routed to the respective application servers.
 
-VPN, TCP, RDP/SSH & Agentless applications can be configured in a single InstaSafe ZTAA Gateway.
+VPN, TCP, RDP/SSH & Agentless applications can be configured in a single InstaSafe ZTNA Gateway.
 
-An InstaSafe ZTAA Gateway must be provisioned on a physical server or VM/instance at each of the respective data centres as per the below mentioned configuration. For the purpose of redundancy, it is recommended to provision a backup InstaSafe Gateway as well, with the same configuration.
+An InstaSafe ZTNA Gateway must be provisioned on a physical server or VM/instance at each of the respective data centres as per the below mentioned configuration. For the purpose of redundancy, it is recommended to provision a backup InstaSafe Gateway as well, with the same configuration.
 
 
 ### VM Sizing
@@ -31,7 +31,7 @@ Note : Supports Other Platforms like Windows or Linux VM running on VMWare or Hy
 
 ## Network Requirements
 
-Every InstaSafe ZTAA Gateway must have local network access to all the application servers in that data centre you wish to provide secure access to.
+Every InstaSafe ZTNA Gateway must have local network access to all the application servers in that data centre you wish to provide secure access to.
 
 ### Network Firewall Rules
 
@@ -46,8 +46,26 @@ Every InstaSafe ZTAA Gateway must have local network access to all the applicati
 **Note:** If the above mentioned ports are already being utilized in your network for different purpose then there is customization available for the gateways to listen on different port numbers.
 
 
-InstaSafe ZTAA Gateways has a host firewall which filters the network traffic coming in, so even if source is “any” in network firewall, InstaSafe ZTAA Gateway is equipped to handle unknown incoming traffic. 
+InstaSafe ZTNA Gateways has a host firewall which filters the network traffic coming in, so even if source is “any” in network firewall, InstaSafe ZTNA Gateway is equipped to handle unknown incoming traffic. 
 
 ### Proxy Configuration
 
 In case of a proxy present, it must be ensured that the connection is allowed directly from the firewall.
+
+## Supported hypervisors
+
+The note above names examples of host platforms for the gateway. It is not the list of
+supported hypervisors, which is:
+
+| Hypervisor | |
+|---|---|
+| **VMware ESXi** | |
+| **Microsoft Hyper-V** | |
+| **KVM** | including **Red Hat KVM** and **Proxmox VE**, both open source |
+
+The solution components are supplied as a unified OVA template and deployed as virtual
+machines, one per component. KVM-based hypervisors are supported, so a deployment is not tied
+to a commercial virtualisation platform. The hypervisor hosts the virtual machines and plays
+no part in authentication, policy evaluation or tunnel termination, so the platform behaves
+identically on any supported hypervisor. See
+[Supported Hypervisors and the Deployment Package](hypervisor-support.md).

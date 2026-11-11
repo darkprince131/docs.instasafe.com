@@ -13,7 +13,7 @@ The admin can configure a range of private IP so as to avoid any conflict with e
 * Static IP is allocated from the network series created by Admin .Each  IP is associated with a User and particular device.
 
 ```
-**P.S ZTAA VPN component only works on NAT and hence the gateway needs to be installed in DMZ.**
+**P.S InstaSafe ZTNA VPN component only works on NAT and hence the gateway needs to be installed in DMZ.**
 ```
 
 ## Steps to Configure VPN profile 

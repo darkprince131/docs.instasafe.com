@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-With Always ON enabled the VPN tunnel is established with the configured network applications as soon as the user switches on his/her's PC. There is no need to log in to the ZTAA client to have the VPN tunnel established. By enabling ZTAA's Always ON functionality, organizations can keep all digital assets fully protected and provide secure access for remote workers across all  devices. 
+With Always ON enabled the VPN tunnel is established with the configured network applications as soon as the user switches on his/her's PC. There is no need to log in to the InstaSafe ZTNA client to have the VPN tunnel established. By enabling InstaSafe ZTNA's Always ON functionality, organizations can keep all digital assets fully protected and provide secure access for remote workers across all  devices. 
 
 `Please note: Always ON feature is applicable only for network applications`
 

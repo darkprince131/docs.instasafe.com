@@ -24,13 +24,13 @@ Conditional MFA based on Trusted IP addresses enhances security by requiring mul
 
 **Temporary Access:** Allow temporary trusted access for specific IPs during maintenance or audits.
 
-###Implementation of Conditional MFA in ZTAA
+###Implementation of Conditional MFA in InstaSafe ZTNA
 
-The below video illustrates the Conditional MFA use case implementation in the InstaSafe ZTAA platform.
+The below video illustrates the Conditional MFA use case implementation in the InstaSafe ZTNA platform.
 
-1. As demonstrated in the video, Administrators selects OTP as the Secondary Authentication for a user. When the user tries to login to the ZTAA platform for application access, the user is prompted to provide an OTP for Secondary Authentication.
+1. As demonstrated in the video, Administrators selects OTP as the Secondary Authentication for a user. When the user tries to login to the the platform for application access, the user is prompted to provide an OTP for Secondary Authentication.
 2. Administrators then updates a Trusted IP address in the 'OTP Bypass' field which is available in the Secondary Authentication tab.
-When the user tries to login to the ZTAA platform from an IP which is configured in the 'OTP Bypass', the user is not prompted to provide an OTP.
+When the user tries to login to the the platform from an IP which is configured in the 'OTP Bypass', the user is not prompted to provide an OTP.
 
 ![](../static/ztaa/OTP_BYPASS.gif)
 

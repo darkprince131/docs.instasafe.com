@@ -4,7 +4,7 @@ comments: true
 #### DOMAIN JOINING 
 
 Workforce today, is becoming increasingly mobile and dynamic. They expect that the individuals should not be confined to an office and should have the freedom and ability to work remotely.Over the years, IT Admins have relied on directory services like AD (Active Directory) to make
-the workforce compliant to the company policies. However, in today’s scenario, it becomes very difficult to make the remote workers comply with the policy, as the directory services can only be implemented on On-Premise users. InstaSafe ZTAA empowers the IT teams to make the remote devices join the corporate domain, so they can then easily push policies using AD(Active Directory). 
+the workforce compliant to the company policies. However, in today’s scenario, it becomes very difficult to make the remote workers comply with the policy, as the directory services can only be implemented on On-Premise users. InstaSafe ZTNA empowers the IT teams to make the remote devices join the corporate domain, so they can then easily push policies using AD(Active Directory). 
 
 **Prerequisites-**
 
@@ -16,7 +16,7 @@ the workforce compliant to the company policies. However, in today’s scenario,
 
 **Steps to Configure**
 
-1. Login to ZTAA console as an admin
+1. Login to the console as an admin
 
 2. Create a  [Network application](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/005-creatingapplication/#for-network-application) with the domain of AD-Server(eg. instalocal.local).
 

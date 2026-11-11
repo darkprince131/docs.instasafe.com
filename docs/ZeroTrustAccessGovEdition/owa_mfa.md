@@ -15,7 +15,7 @@ Multi-factor authentication (MFA) is the logical answer for protecting OWA acces
 
 **Safeguarding Remote Access**: With the rise of remote work, securing access to corporate email and resources via OWA is crucial. MFA helps ensure that only authorized users can access sensitive information from various locations and devices.
 
-The below video illustrates how InstaSafe ZTAA solution secures Outlook Web Access with Two-Factor authentication.
+The below video illustrates how InstaSafe ZTNA solution secures Outlook Web Access with Two-Factor authentication.
 
 Users while trying to access Outlook Web Access are redirected to the InstaSafe platform where they need to perform a multi-factor 
 authentication. If the authentication is successful then users are granted access to Outlook Web Access.

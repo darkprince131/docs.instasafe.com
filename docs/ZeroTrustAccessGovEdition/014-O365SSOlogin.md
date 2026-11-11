@@ -1,21 +1,21 @@
 ---
 comments: true
 ---
-## Logging into O365 with ZTAA as SSO
+## Logging into O365 with InstaSafe ZTNA as SSO
 
-<span dir="">Office 365 SSO integration by Instasafe ZTAA provides secure access and full control over multiple Web and SaaS applications to enterprise users and clients. Using ZTAA as an users to Single Sign-On into Office 365 account with one set of login credentials, eliminating user-managed passwords and the risk of phishing. Single Sign-On for Office 365 sets up leverages the existing on-premise Active Directory infrastructure and provides seamless integration without the need to manage multiple on-premise and cloud identities.</span>
+<span dir="">Office 365 SSO integration by InstaSafe ZTNA provides secure access and full control over multiple Web and SaaS applications to enterprise users and clients. Using InstaSafe ZTNA as an users to Single Sign-On into Office 365 account with one set of login credentials, eliminating user-managed passwords and the risk of phishing. Single Sign-On for Office 365 sets up leverages the existing on-premise Active Directory infrastructure and provides seamless integration without the need to manage multiple on-premise and cloud identities.</span>
 
 <span dir="">In addition to SSO for Office 365, users will have one-click access to all their apps and . Users requirement to secure Office 365 also helped us to introduce enhanced Office 365 Two-Factor Authentication solution. </span>
 
 **<span dir="">Import Users from Azure AD</span>** 
 
-<span dir="">Users need to be synced from Azure AD so that ZTAA recognises them and pulls all users details. Profile for O365 users will be existing in Azure AD.</span>
+<span dir="">Users need to be synced from Azure AD so that InstaSafe ZTNA recognises them and pulls all users details. Profile for O365 users will be existing in Azure AD.</span>
 
 ![Image](../static/ztaa/)
 
 **<span dir="">Steps to Sync Azure AD profile</span>**
 
-<span dir="">To sync users from Azure AD to ZTAA the admins need to login to AzureAD via ZTAA console </span>
+<span dir="">To sync users from Azure AD to InstaSafe ZTNA the admins need to login to AzureAD via the console </span>
 
  <span dir="">1- Log in as an admin and go to Identity Management</span>
 
@@ -30,11 +30,11 @@ comments: true
 **<span dir="">P.S Please search for individual user name to confirm that users have been successfully imported.</span>**
 
 
-**<span dir="">Configuring ZTAA as IDP</span>**
+**<span dir="">Configuring InstaSafe ZTNA as IDP</span>**
 
 1. <span dir="">Go to Identity Provider and configure a SAML profile for O365.</span>
 | **<span dir="">Basic SAML Configuration setting</span>** | **<span dir="">SP Initiated</span>** | **<span dir="">IdP-Initiated</span>** | **<span dir="">Description</span>** |
-| **<span dir="">Identifier (Entity ID)</span>** | <span dir="">Required for some apps</span> | <span dir="">Required for some apps</span> | <span dir="">This field will Uniquely identify ZTAA application. Azure AD sends the identifier to the application as the Audience parameter of the SAML token. The application is expected to validate it. This value also appears as the **Entity ID** in ZTAA provided by the application. </span> |
+| **<span dir="">Identifier (Entity ID)</span>** | <span dir="">Required for some apps</span> | <span dir="">Required for some apps</span> | <span dir="">This field will Uniquely identify InstaSafe ZTNA application. Azure AD sends the identifier to the application as the Audience parameter of the SAML token. The application is expected to validate it. This value also appears as the **Entity ID** in InstaSafe ZTNA provided by the application. </span> |
 | **<span dir="">ACS URL (Reply URL/Redirection URL)</span>** | <span dir="">Required</span> | <span dir="">Required</span> | <span dir="">ACS or Assertion Consumer Service URL specifies where the application expects to receive the SAML token. This is to be obtained from the meta data file obtained for azure.</span> |
 | **<span dir="">IDP URL and Logout URL</span>**  | <span dir="">Required</span> | <span dir="">Auto generated</span> | <span dir="">The IDP URL and Logout Url will be generated post successful configuration as a IDP and needs to be after configuration to be provided while configuring SP. </span> |
 
@@ -77,7 +77,7 @@ comments: true
 
 ![Image](../static/ztaa/)
 
-1. <span dir="">You will be redirected to ZTAA authentication page. Enter your credentials</span>
+1. <span dir="">You will be redirected to InstaSafe ZTNA authentication page. Enter your credentials</span>
 
 ![Image](../static/ztaa/)
 

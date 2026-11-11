@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-ZTAA supports granular level access control to application i.e in addition to administrators  controlling which user has access to which resource, they can also configure the type of access. Application is  defined as any service running on  the organization's data center or cloud, for which secure access is to be provided through ZTAA. It may be a web application, private application, File server or virtual instances.
+InstaSafe ZTNA supports granular level access control to application i.e in addition to administrators  controlling which user has access to which resource, they can also configure the type of access. Application is  defined as any service running on  the organization's data center or cloud, for which secure access is to be provided through InstaSafe ZTNA. It may be a web application, private application, File server or virtual instances.
 
 ## Steps to Add an Application
 
@@ -14,8 +14,8 @@ Applications can be created from the **‘Application’** tab in the **Perimete
 | Application Type |  |
 | ------ | ------ |
 |**Web Application** | Any simple internet application(SAAS application) to be accessed via URL/Public Ip. Example https://deemoadmin-trials72.orangehrmlive.com/ |
-|**SSH Application** | Any linux server/virtual machine to which SSH access is required through ZTAA secure browser.|
-|**RDP Application** | Any windows server/virtual machine to which RDP access is required through ZTAA. |
+|**SSH Application** | Any linux server/virtual machine to which SSH access is required through InstaSafe ZTNA secure browser.|
+|**RDP Application** | Any windows server/virtual machine to which RDP access is required through InstaSafe ZTNA. |
 |**Fileserver** | Any server or drive responsible for storage and managing access to documents to other users of the organization |
 |**Network Application** |Any private application running on internal server or cloud and is to be accessed through  private IP and dedicated port over secured VPN connectivity|
 |**IOS and Android Application** |For controlling access to application running on IOS or Android environment |

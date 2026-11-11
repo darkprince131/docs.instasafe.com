@@ -3,13 +3,13 @@ comments: true
 ---
 ### Enabling Two Factor Authentication
 
-Two factor authentication can be enabled under Auth profile tab in Identity Management section of the ZTAA Admin console. The Admin can set a Global Auth Profile which will enable different primary authentication methods as well as secondary authentication for all users. Exclusion to Auth profiles can also  be created for individual user or user groups to customize the authentication profile as per the organisation requirements.
+Two factor authentication can be enabled under Auth profile tab in Identity Management section of the InstaSafe ZTNA Admin console. The Admin can set a Global Auth Profile which will enable different primary authentication methods as well as secondary authentication for all users. Exclusion to Auth profiles can also  be created for individual user or user groups to customize the authentication profile as per the organisation requirements.
 
 The various methods of available Primary Authentication are:
 
-* Password: Logging into ZTAA directly via password.
-* AD: Logging into ZTAA via Active Directory credentials.
-* SAML: Logging into ZTAA via organization's identity provider.
+* Password: Logging into InstaSafe ZTNA directly via password.
+* AD: Logging into InstaSafe ZTNA via Active Directory credentials.
+* SAML: Logging into InstaSafe ZTNA via organization's identity provider.
 
 The various methods of available Secondary Authentication are:
 
@@ -34,7 +34,7 @@ The various methods of available Secondary Authentication are:
 
 The global Authentication Profile is now set.
 
-The method to set up 2FA in ZTAA a can also be seen in the video given below.
+The method to set up 2FA in InstaSafe ZTNA a can also be seen in the video given below.
 
 ![GlobalAuthprofile](../static/ztaa/AuthProfileConfig.gif)
 

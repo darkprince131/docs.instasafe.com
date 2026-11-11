@@ -15,15 +15,15 @@ A typical MFA login would require the user to present some combination of the fo
 
 • Something you are: some form of biometric factor (facial recognition, fingerprint, palm print or voice recognition).
 
-## Enabling Multi-Factor Authentication in InstaSafe ZTAA
+## Enabling Multi-Factor Authentication in InstaSafe ZTNA
 
-Two factor authentication can be enabled under Auth profile tab in Identity Management section of the ZTAA Admin console. The Admin can set a Global Auth Profile which will enable different primary authentication methods as well as secondary authentication for all users. Exclusion to Auth profiles can also  be created for individual user or user groups to customize the authentication profile as per the organisation requirements.
+Two factor authentication can be enabled under Auth profile tab in Identity Management section of the InstaSafe ZTNA Admin console. The Admin can set a Global Auth Profile which will enable different primary authentication methods as well as secondary authentication for all users. Exclusion to Auth profiles can also  be created for individual user or user groups to customize the authentication profile as per the organisation requirements.
 
 The various methods of available Primary Authentication are:
 
-* Password: Logging into ZTAA directly via password.
-* AD: Logging into ZTAA via Active Directory credentials.
-* SAML: Logging into ZTAA via organization's identity provider.
+* Password: Logging into InstaSafe ZTNA directly via password.
+* AD: Logging into InstaSafe ZTNA via Active Directory credentials.
+* SAML: Logging into InstaSafe ZTNA via organization's identity provider.
 
 The various methods of available Secondary Authentication are:
 
@@ -51,7 +51,7 @@ The various methods of available Secondary Authentication are:
 
 The global Authentication Profile is now set.
 
-The method to set up 2FA in ZTAA a can also be seen in the video given below.
+The method to set up 2FA in InstaSafe ZTNA a can also be seen in the video given below.
 
 ![GlobalAuthprofile](../static/ztaa/AuthProfileConfig.gif)
 
@@ -96,3 +96,19 @@ Number Challenge for phishing-resistant verification
 Just-in-Time Consent/Signing – Requires explicit user confirmation before execution of critical actions, providing non-repudiation and auditability.
 
 Seamless Integration – Works across web, mobile, and API-based transactions without disrupting standard user workflows.
+
+## Second factors available to directory-authenticated users
+
+A user whose password is held in Active Directory or OpenLDAP is challenged from the same set
+of factors as any other user: TOTP from any authenticator application, push notification
+through the InstaSafe Authenticator app, OTP over SMS, OTP over email, a FIDO2 hardware key,
+or a backup code for recovery. Each user enrols their own factors on the Multi Factor
+Authentication page of their profile, which additionally offers a digital certificate and a
+second factor at Windows computer login.
+
+Biometric, fingerprint and facial authentication are provided through WebAuthn / FIDO2 -
+Windows Hello, a security key, or a passkey on the phone - where the biometric is read and
+verified by the device itself and no biometric template is transmitted to or stored by the
+platform.
+
+See [Directory Authentication and the MFA Methods Available With It](directory-mfa.md).

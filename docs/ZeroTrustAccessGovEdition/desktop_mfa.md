@@ -3,13 +3,13 @@ comments: true
 ---
 The InstaSafe Windows MFA feature is essentially a plugin that implements multi-factor authentication (MFA) as part of the Windows login, thereby providing an improved security posture. With the InstaSafe Windows MFA installed, users will be prompted to provide a secondary factor of authentication along with the password while doing a login to their Windows system. This approach adds an additional layer of security beyond just a username and password, making it significantly harder for unauthorized users to gain access.
 
-Users will be provided with the InstaSafe logo in the Windows login screen. When a user selects the login method via Instasafe then the authentication request (for UserName and Password) is sent to the ZTAA authentication server for verification. Domain joined users, provisioned in ZTAA via Active Directory/LDAP would then be authenticated by the corporate IAM configured for the tenant, while local users provisioned in ZTAA would be authenticated by the ZTAA authentication server itself.
+Users will be provided with the InstaSafe logo in the Windows login screen. When a user selects the login method via Instasafe then the authentication request (for UserName and Password) is sent to the InstaSafe ZTNA authentication server for verification. Domain joined users, provisioned in InstaSafe ZTNA via Active Directory/LDAP would then be authenticated by the corporate IAM configured for the tenant, while local users provisioned in InstaSafe ZTNA would be authenticated by the InstaSafe ZTNA authentication server itself.
 
 The InstaSafe Windows MFA utility will prompt the user to perform the secondary authentication with the below two options:
 - authenticate with OTP sent over Email and SMS.
 - authenticate with the 6 digit TOTP from the configured Authenticator app.
 
-**Note:** It is highly recommended that users configure their ZTAA profile with a third party authenticator app or with the InstaSafe Authenticator app to perform the secondary authentication while login to their Windows system. In case there is a delay in receiving the OTP from the SMS provider or if user do not have an internet connection then they can use the TOTP from the authenticator app to login to their windows machine.
+**Note:** It is highly recommended that users configure their InstaSafe ZTNA profile with a third party authenticator app or with the InstaSafe Authenticator app to perform the secondary authentication while login to their Windows system. In case there is a delay in receiving the OTP from the SMS provider or if user do not have an internet connection then they can use the TOTP from the authenticator app to login to their windows machine.
 
 Similar MFA plugin is also available for **Ubuntu** and **Red Hat Enterprise Linux** to perform secondary authentication during the login process.
 The MFA plugin for macOS is in Beta Release.

@@ -12,8 +12,8 @@ the console.
 | **Acting as the identity provider** | Other applications send their users to the platform to authenticate | IDAM → **OpenID Provider**, **OAuth2 Service**, **SAML IDP**, **RADIUS Service** |
 
 SAML is supported alongside OpenID Connect in both directions - see
-[Log into ZTAA via SSO](013b-ConfiguringZTAAasSPwithSAML.md) and
-[ZTAA as IDP for SSO](013-ConfiguringZTAAasSSOwithSAML.md).
+[Log into InstaSafe ZTNA via SSO](013b-ConfiguringZTAAasSPwithSAML.md) and
+[InstaSafe ZTNA as IDP for SSO](013-ConfiguringZTAAasSSOwithSAML.md).
 
 ## Signing in with an external identity provider
 

@@ -6,7 +6,7 @@ Installation Guide
 
 ### Zero Trust Application Access - With Applications in the DMZ
 
-This guide details how to quickly set up a working ZTAA environment. The control access has to be configured at the controller level, where as the application has to be onboarded via the gateway.
+This guide details how to quickly set up a working InstaSafe ZTNA environment. The control access has to be configured at the controller level, where as the application has to be onboarded via the gateway.
 
 ### Controller Configurations
 
@@ -46,12 +46,12 @@ This panel has the submit button to add this policy to the controller.On success
 
 #### Create a Gateway
 
-The gateway is the relay point between the user and the application and point of access to all the applications secured by the ZTAA. Therefore, the security configuration of the gateway has to be impenetrable.
+The gateway is the relay point between the user and the application and point of access to all the applications secured by the InstaSafe ZTNA. Therefore, the security configuration of the gateway has to be impenetrable.
 
 As an admin, Navigate to the Downloads page in the portal. Here you find the command to install the gateway on a linux machine
 Prerequisites of the linux machine
 	
-A Linux machine which is publicly accessible has to be earmarked for the installation of the gateway software. This machine should be able to access all the applications that are to be accessed through the ZTAA network locally.
+A Linux machine which is publicly accessible has to be earmarked for the installation of the gateway software. This machine should be able to access all the applications that are to be accessed through the InstaSafe ZTNA network locally.
 	
 The machine should allow all inbound and outbound TCP traffic on port 443 publicly. It is strongly recommended that no ports other than 22 and 443 are opened publicly.
 A user in the linux system with sudo privileges.
@@ -100,12 +100,12 @@ Once in edit mode, Click on Add Applications, add the applications that are to b
 	
 On successful addition of the application to the  gateway, you will be given a notification in green.
 
-The ZTAA setup is complete. Users who were added in policies will be able access the applications through the agent. A guide for users to access applications can be found under the Getting Started section of this document.
+The InstaSafe ZTNA setup is complete. Users who were added in policies will be able access the applications through the agent. A guide for users to access applications can be found under the Getting Started section of this document.
 
 
 
 ### Zero Trust Application Access - SAML applications
-This guide details the steps involved in adding SAML SSO supported third party applications into ZTAA. Since each Service Provider has different requirements to establish trust between the platform and itself, The process of adding the application will be detailed assuming that configuration has been done such that the Service Provider trusts the Instasafe IDP.
+This guide details the steps involved in adding SAML SSO supported third party applications into InstaSafe ZTNA. Since each Service Provider has different requirements to establish trust between the platform and itself, The process of adding the application will be detailed assuming that configuration has been done such that the Service Provider trusts the Instasafe IDP.
 
 Navigate to the Identity Provider tab under Identity Management. Click on the ‘+’ to add a new service provider.
 	
@@ -159,14 +159,14 @@ This panel has the submit button to add this policy to the controller.On success
 
 #### Create a Gateway
 
-The gateway is the relay point between the user and the application and point of access to all the applications secured by the ZTAA. Therefore, the security configuration of the gateway has to be impenetrable.
+The gateway is the relay point between the user and the application and point of access to all the applications secured by the InstaSafe ZTNA. Therefore, the security configuration of the gateway has to be impenetrable.
 
 As an admin, Navigate to the Downloads page in the portal. Here you find the command to install the gateway on a linux machine
 Prerequisites of the linux machine
 	
 A Linux machine which is publicly accessible has to be earmarked for the installation of the gateway software. 
 	
-This machine should be able to access all the applications that are to be accessed through the ZTAA network locally.
+This machine should be able to access all the applications that are to be accessed through the InstaSafe ZTNA network locally.
 	
 The machine should allow all inbound and outbound UDP traffic on port 443 publicly. It is strongly recommended that no ports other than 22 and 443 are opened publicly.
 A user in the linux system with sudo privileges.

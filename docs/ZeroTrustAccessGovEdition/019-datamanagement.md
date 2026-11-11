@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-ZTAA supports creation of advanced security rules which can control access based on device security posture. Advanced security checks such as Application Access Time, Operating System, Antivirus,location details etc. can be configured using data management features. Dataset created here will be used in Access Policies to configure rules.
+InstaSafe ZTNA supports creation of advanced security rules which can control access based on device security posture. Advanced security checks such as Application Access Time, Operating System, Antivirus,location details etc. can be configured using data management features. Dataset created here will be used in Access Policies to configure rules.
 
 ### Creating a Dataset
 
@@ -12,7 +12,7 @@ ZTAA supports creation of advanced security rules which can control access based
 3. Click on "Create Dataset" button.
 
 
-ZTAA currently supports the following parameters for which dataset can be created. 
+InstaSafe ZTNA currently supports the following parameters for which dataset can be created. 
 
 * Application
 * Application Access Time

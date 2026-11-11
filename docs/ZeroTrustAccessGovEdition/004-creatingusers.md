@@ -1,18 +1,18 @@
 ---
 comments: true
 ---
-ZTAA supports user creation locally i.e directly from within the console or be imported from directory services such as AD or Azure. 
+InstaSafe ZTNA supports user creation locally i.e directly from within the console or be imported from directory services such as AD or Azure. 
 
 The following article highlights how a single user can be added directly.User addition via importing from directory services has been dealt with in later articles.Users can be created from the User Tab under Identity Management Section or directly from  Create User option in the  Quick setup section of the homescreen.
 
 ## Adding an User
 
-The article describes the steps, how a individual can be added to ZTAA platform.Users can only be added by members with **Admin** or **Ownership** priviledge. 
+The article describes the steps, how a individual can be added to the platform.Users can only be added by members with **Admin** or **Ownership** priviledge. 
 
 | Role | |
 | ------ | ----- |
 | Owner| The principal admin account associated with a company,it is generally  the first account created for a company.  Ownership can be transfered to  another admin user within the company.An Owner account cannot be deleted. |
-|  Admin| Admin are responsble for managing activities on the ZTAA platform  and have the right to add/delete/edit configurations in the console.|
+|  Admin| Admin are responsble for managing activities on the the platform  and have the right to add/delete/edit configurations in the console.|
 | Read Only Admin| Readonly Admin or subadmins have limited priviledge access i.e  they can view but cannot modify configurations in the console.|
 | Regular User| Regular users using the product for access to enterprise  application and cannot veiw or modify any configurations.|
 
@@ -44,3 +44,9 @@ is met.
 The above steps and the process of creating an user can be seen in the video below.
 
 ![NewUserAddition.gif](../static/ztaa/usercreation.gif)
+
+## Granting application access
+
+Applications are not granted to users one at a time. Users are grouped by their role, and an
+access rule binds the group to the applications that role needs - see
+[User Groups](004b-usergroup.md).

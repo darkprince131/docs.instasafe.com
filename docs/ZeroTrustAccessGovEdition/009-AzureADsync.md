@@ -3,12 +3,12 @@ comments: true
 ---
 ## Importing Users from Azure AD
 
-ZTAA allows users to be synced directly from Azure AD. 
+InstaSafe ZTNA allows users to be synced directly from Azure AD. 
 
 
-**To sync users from Azure AD to ZTAA the admins need to login to AzureAD via ZTAA console**
+**To sync users from Azure AD to InstaSafe ZTNA the admins need to login to AzureAD via the console**
 
-1. Log in as an admin in ZTAA and go to Directory Sync Profile under Identity management. 
+1. Log in as an admin in InstaSafe ZTNA and go to Directory Sync Profile under Identity management. 
 
 2. Click on the 'Add New Profile' (+) button and select Azure AD .
 

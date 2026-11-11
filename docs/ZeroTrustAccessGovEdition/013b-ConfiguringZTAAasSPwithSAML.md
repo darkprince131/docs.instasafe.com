@@ -3,26 +3,26 @@ comments: true
 ---
 ## Configuring as a Service Provider with SAML
 
-<span dir="">Instasafe ZTAA can act as both, an Identity provider as well as a service provider i.e., be integrated with other identity provider such as Azure AD. This article shows how Instasafe ZTAA can be configured to be used as an service provider for Azure AD i.e. how can a user log into ZTAA with Azure AD as a SSO.</span>
+<span dir="">InstaSafe ZTNA can act as both, an Identity provider as well as a service provider i.e., be integrated with other identity provider such as Azure AD. This article shows how InstaSafe ZTNA can be configured to be used as an service provider for Azure AD i.e. how can a user log into InstaSafe ZTNA with Azure AD as a SSO.</span>
 
-## Logging into ZTAA via Azure sso
+## Logging into InstaSafe ZTNA via Azure sso
 
 
 | **Basic SAML Configuration setting** | **SP Initiated** | **IdP-Initiated** | **Description** | 
 | ------ | ------ |------ | ------ |
-| **Identifier (Entity ID)** | Required for some apps | Required for some apps | This field will Uniquely identify ZTAA application. Azure AD sends the identifier to the application as the Audience parameter of the SAML token. The application is expected to validate it. This value also appears as the **Entity ID** in ZTAA provided by the application.| 
+| **Identifier (Entity ID)** | Required for some apps | Required for some apps | This field will Uniquely identify InstaSafe ZTNA application. Azure AD sends the identifier to the application as the Audience parameter of the SAML token. The application is expected to validate it. This value also appears as the **Entity ID** in InstaSafe ZTNA provided by the application.| 
 | **ACS URL (Reply URL/Redirection URL)** | Required | Required | ACS or Assertion Consumer Service URL specifies where the application expects to receive the SAML token.| 
 | **Sign-on URL** | Required | Need not be specified | When a user opens this URL, the service provider redirects to Azure AD to authenticate and sign on the user. Azure AD uses the URL to start the application from Microsoft 365 or Azure AD My Apps. When blank, Azure AD does an IdP-initiated sign-on when a user launches the application from Microsoft 365, Azure AD My Apps, or the Azure AD SSO URL.|
 
 
-Azure AD can be configured as a SSO for ZTAA by following the given Steps. 
+Azure AD can be configured as a SSO for InstaSafe ZTNA by following the given Steps. 
 
 ### Configurations in Azure AD
 
-1. <span dir="">Add ZTAA as an enterprise application Application.</span>
+1. <span dir="">Add InstaSafe ZTNA as an enterprise application Application.</span>
 
 
-1. <span dir="">Select Create your own Application and enter Instasafe ZTAA and go to Manage and Properties.Save the access URL</span>
+1. <span dir="">Select Create your own Application and enter InstaSafe ZTNA and go to Manage and Properties.Save the access URL</span>
 
 
 1. <span dir="">Enable Users for Sign in. Select users to add from **Users and Group** option.</span>
@@ -37,10 +37,10 @@ Azure AD can be configured as a SSO for ZTAA by following the given Steps.
 
 1. <span dir="">Define Entity ID. The value can be any string. Here a sample url is used as value.  </span>
 
-1. <span dir="">The reply (ACS) URL to be copied from ZTAA console and pasted here<sup>. \* </sup></span>
+1. <span dir="">The reply (ACS) URL to be copied from the console and pasted here<sup>. \* </sup></span>
 
 
-1. <span dir="">The URL for ZTAA application login page has to be added **Sign-on URL**  field.</span>
+1. <span dir="">The URL for InstaSafe ZTNA application login page has to be added **Sign-on URL**  field.</span>
 
 
 1. <span dir="">Next Go to ** User Attributes and Claim.**</span>
@@ -58,10 +58,10 @@ Azure AD can be configured as a SSO for ZTAA by following the given Steps.
 1. <span dir="">Visit the link provided in **App federation metadata** URL. Obtain the entity ID from the first line of the page. The same will be required during configuring.</span>
 
 
-1. <span dir="">Download the certificate(base64). Open in notepad. This data will be required to be pasted into ZTAA console\*\*<sup>#</sup>\*\*.</span>
+1. <span dir="">Download the certificate(base64). Open in notepad. This data will be required to be pasted into the console\*\*<sup>#</sup>\*\*.</span>
 
 
-### Configuration Steps in ZTAA
+### Configuration Steps in InstaSafe ZTNA
 
 1. <span dir="">Go to **Auth Profile** under Identity section of the **console.**</span>
 
@@ -93,7 +93,7 @@ Azure AD can be configured as a SSO for ZTAA by following the given Steps.
 
 ### Verification
 
-1. <span dir="">Once setup is complete, open the ZTAA URL and enter the username for the user for whom the IDP is set. Click on SAML login.</span>
+1. <span dir="">Once setup is complete, open the InstaSafe ZTNA URL and enter the username for the user for whom the IDP is set. Click on SAML login.</span>
 
 
 1. <span dir="">The Portal will be redirected to Microsoft login.</span>
@@ -105,6 +105,6 @@ Azure AD can be configured as a SSO for ZTAA by following the given Steps.
 
 **<span dir="">Please note</span>**<span dir=""> It is advisable to keep username same as email so as to minimise chances of error during configuration.</span>
 
-The method to set up ZTAA as a service provider with Azure Ad can also be seen in the video given below.
+The method to set up InstaSafe ZTNA as a service provider with Azure Ad can also be seen in the video given below.
 
 ![](../static/ztaa/ZTAA_Azure_SSO_Setup.gif)

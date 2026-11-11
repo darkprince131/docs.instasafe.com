@@ -3,7 +3,7 @@ comments: true
 ---
 ### Prerequisite
 
-The  company admin must ensure that the following prerequisites are met prior to installation of InstaSafe ZTAA gateway. It is recommended to set up a backup InstaSafe Gateway, with the same configuration for the purpose of redundancy.
+The  company admin must ensure that the following prerequisites are met prior to installation of InstaSafe ZTNA gateway. It is recommended to set up a backup InstaSafe Gateway, with the same configuration for the purpose of redundancy.
 
 
 
@@ -29,10 +29,10 @@ The  company admin must ensure that the following prerequisites are met prior to
 **Please Note**
 
 ```
-1. InstaSafe ZTAA Gateway has inbuilt firewall features and hence is equipped to handle network traffic coming from unknown sources, 
+1. InstaSafe ZTNA Gateway has inbuilt firewall features and hence is equipped to handle network traffic coming from unknown sources, 
 even when a network firewall allows traffic from any source.
 2. If any proxy configuration is present, it must be ensured that direct connection from the firewall is allowed.
-3. ZTAA VPN component only works on NAT and hence the gateway needs to be installed in DMZ.
+3. InstaSafe ZTNA VPN component only works on NAT and hence the gateway needs to be installed in DMZ.
 
 ```
 

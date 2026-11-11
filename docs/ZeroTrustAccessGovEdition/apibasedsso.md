@@ -2,17 +2,17 @@
 comments: true
 ---
 
-The ZTAA platform provides support for API based authentication. Built on the OAuth2.0 framework, the APIs can be leveraged to provide Single Sign On (SSO) to non-SAML web applications.
+The the platform provides support for API based authentication. Built on the OAuth2.0 framework, the APIs can be leveraged to provide Single Sign On (SSO) to non-SAML web applications.
 
 The workflow for utilizing the authentication APIs are as follows:
 
-1. Create a OAuth2 profile in the ZTAA admin console to generate the client id & client secret.
+1. Create a OAuth2 profile in the InstaSafe ZTNA admin console to generate the client id & client secret.
 
-2. Create a SSO profile in the ZTAA admin console to bind the OAuth2 profile with the users/user groups who needs to be validated for authentication.
+2. Create a SSO profile in the InstaSafe ZTNA admin console to bind the OAuth2 profile with the users/user groups who needs to be validated for authentication.
 
-3. The /token api from the ZTAA platform to be invoked to generate an access token based on the client id & client secret.
+3. The /token api from the the platform to be invoked to generate an access token based on the client id & client secret.
 
-4. The /login api from the ZTAA platform which takes the input as the username, password and generated access token to authenticate the user.
+4. The /login api from the the platform which takes the input as the username, password and generated access token to authenticate the user.
 
 ### Creating a OAuth2 profile
 1. Click on the Configuration button on the left side menu.
@@ -39,7 +39,7 @@ The below video shows the steps for creating a OAuth2 profile and SSO API Identi
 
 ### Generate access token
 
-The /token api from the ZTAA platform is to be invoked to generate an access token. The details of the api are given below:
+The /token api from the the platform is to be invoked to generate an access token. The details of the api are given below:
 
 ```
 POST https://<tenant url>/console/g2/oauth2/token
@@ -75,7 +75,7 @@ Response Body
 
 ### Authenticate users 
 
-The /login api from the ZTAA platform is to be invoked to authenticate users. The details of the api are given below:
+The /login api from the the platform is to be invoked to authenticate users. The details of the api are given below:
 
 ```
 POST https://<tenant url>/console/g2/sso/login

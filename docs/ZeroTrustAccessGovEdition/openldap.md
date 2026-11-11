@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-ZTAA supports integration with  different IAM services such as [Open-LDAP](https://www.openldap.org/), LDAP. Using this multiple users can be onboarded rapidly via syncing from organisations identity managment services. ZTAA can also be used to configure AD as a Primary mode for authentication. 
+InstaSafe ZTNA supports integration with  different IAM services such as [Open-LDAP](https://www.openldap.org/), LDAP. Using this multiple users can be onboarded rapidly via syncing from organisations identity managment services. InstaSafe ZTNA can also be used to configure AD as a Primary mode for authentication. 
 
 For  provisioning users through Open LDAP , a gateway  must be installed in the same subnet as the LDAP server.
 

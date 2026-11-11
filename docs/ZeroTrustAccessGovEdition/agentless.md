@@ -25,6 +25,17 @@ The below video illustrates the RDP & SSH application access sessions of the use
 
 ![agentless_audit](../static/ztaa/RDP_SSH_Audit_Record.gif)
 
+## Application icons on the portal
 
+Each published application carries its own icon on the user portal, so applications such as
+eOffice or Sparrow are recognisable at a glance rather than appearing as identical tiles. The
+icon is uploaded with the application. See [Application Icons](application-icons.md).
 
+## Reporting, dashboards and export
 
+Application access through the portal is recorded and reported: who opened which application
+and when, session detail, usage by data and by time, and risk and audit reporting, each
+filterable, searchable and exportable. Reporting an organisation wants in its own shape is
+built on the exported data in the analytics or SIEM platform it already uses, and custom
+reports and dashboards can be prepared based on the customer's requirement. See
+[Reporting, Dashboards and Export](reporting-and-export.md).

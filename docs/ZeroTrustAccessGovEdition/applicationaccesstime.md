@@ -15,7 +15,7 @@ Contextual Access Control (CAC) based on application access time involves contro
 
 *Compliance Adherence*: Helps organizations meet regulatory requirements by enforcing access controls that limit access to sensitive applications and data only during authorized times.
 
-**Steps to implement the Application Access Time policy in ZTAA**
+**Steps to implement the Application Access Time policy in InstaSafe ZTNA**
 
 1. Create a dataset of type "Application Access Time"
    - click on the "Configuration" tab on the left menu.
@@ -47,3 +47,12 @@ The below screenshot displays a sample configuration for the Application Access 
 
 
 In conclusion, contextual access control based on application access time is a valuable component of a comprehensive security strategy. It helps organizations optimize resource protection, maintain compliance, and enhance overall cybersecurity posture by aligning access permissions with business needs and security policies.
+
+## Seeing the last login
+
+The other half of a time-based control is knowing when an account was last used. **Last Login
+Time** is the time of the last successful login in the user portal or the agent, and it is
+shown to administrators in two places: the **User Last Login Report**, which lists every user
+and every gateway with the timestamp of their most recent successful login, and the **Event
+Log**, which carries a separate event type for each kind of login and for each kind of
+failure. See [Last Login, and Access by Day and Time](last-login-and-time.md).

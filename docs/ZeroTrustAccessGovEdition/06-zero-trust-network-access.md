@@ -5,15 +5,15 @@ Zero Trust Network Access
 -------------------------
 
 ### Overview
-The architecture follows the Zero Trust ideology like ZTAA but unlike ZTAA, connects users to corporate networks or IP. The access can be leveraged for a set of IPs or can be bound to a IP and port.
+The architecture follows the Zero Trust ideology like InstaSafe ZTNA but unlike InstaSafe ZTNA, connects users to corporate networks or IP. The access can be leveraged for a set of IPs or can be bound to a IP and port.
 
 
 ### Components
 The primary components of the ZTNA include a Client, a Controller, a Gateway and resources. 
 
-Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTNA. Laptops, Desktops, Mobile phones are examples of such clients. However, the ZTAA Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTNA’s access policies are violated or the standards are not met. 
+Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTNA. Laptops, Desktops, Mobile phones are examples of such clients. However, the InstaSafe Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTNA’s access policies are violated or the standards are not met. 
 
-Controllers are the decision making components in ZTA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. ZTA Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
+Controllers are the decision making components in ZTA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. the Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
 
 Gateways are the components which enforce the policies and entitlements set by the controllers. They verify the client's entitlements to grant them access to the resources only in the client’s context. In the context of the CSA SDP model, this component is the Policy Enforcement Point (PEP)
 

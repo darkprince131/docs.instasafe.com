@@ -7,10 +7,10 @@ The authentication profile for the organization can be enabled under Auth profil
 
 The various method of primary Authentication available are
 
-* Password: Logging into ZTAA directly via password.
-* AD:  Logging into ZTAA via Active Directory credentials.
-* SAML: Logging into ZTAA via organization's SSO.
-* OIDC: Logging into ZTAA via organization's OIDC.
+* Password: Logging into InstaSafe ZTNA directly via password.
+* AD:  Logging into InstaSafe ZTNA via Active Directory credentials.
+* SAML: Logging into InstaSafe ZTNA via organization's SSO.
+* OIDC: Logging into InstaSafe ZTNA via organization's OIDC.
 
 InstaSafe directory supports password policy and Account Lockout.
 
@@ -46,7 +46,7 @@ The various method of Secondary Authentication availabe are
 
 The global Authentication Profile is now set.
 
-The method to set up 2FA in ZTAA a can also be seen in the video given below.
+The method to set up 2FA in InstaSafe ZTNA a can also be seen in the video given below.
 
 ![GlobalAuthprofile](../static/ztaa/AuthProfileConfig.gif)
 

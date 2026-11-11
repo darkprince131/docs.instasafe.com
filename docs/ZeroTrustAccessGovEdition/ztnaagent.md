@@ -7,7 +7,7 @@ Featuring a minimalist and user-friendly interface, the ZTNA client enhances eas
 
 **Steps to install the agent.**
 
-1.  Login to the ZTAA console and click on the 'Downloads' in the left menu.
+1.  Login to the the console and click on the 'Downloads' in the left menu.
 
 2.  Click on the 'Download ZTNA Installer' under the Download ZTNA Agent section.
 

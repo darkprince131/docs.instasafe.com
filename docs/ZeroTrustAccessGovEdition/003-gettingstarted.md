@@ -1,7 +1,7 @@
 ---
 comments: true
 ---
-Admins can manage and monitor all activities on the ZTAA platform via the web console.The webconsole is accessible on the internet and the admin can log into the console from any device unless IP based filtering rules have  been applied .
+Admins can manage and monitor all activities on the the platform via the web console.The webconsole is accessible on the internet and the admin can log into the console from any device unless IP based filtering rules have  been applied .
 
  The admin UI is driven by a View/Edit toggle to prevent accidental deletions. Modifications to existing entities can only be made in the edit mode.
 
@@ -33,11 +33,11 @@ A username password can be used to authenticate a user into the platform. The ad
 
 **Security Assertion Markup Language (SAML)**
 
-Instasafe Zero Trust can act as a [SAML Service Provider](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/013-ConfiguringZTAAasSSOwithSAML/) to utilize any third party IDPs to log users into the system. Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the ZTAA platform
+Instasafe Zero Trust can act as a [SAML Service Provider](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/013-ConfiguringZTAAasSSOwithSAML/) to utilize any third party IDPs to log users into the system. Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the the platform
 
 **Active Directory (AD)**
 
-Companies with existing [Active Directories](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/008-importADusers/) can add their servers to the platform and ZTAA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles. In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like,
+Companies with existing [Active Directories](https://docs.instasafe.io/Zero%20Trust%20Application%20Access/008-importADusers/) can add their servers to the platform and InstaSafe ZTNA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles. In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like,
 OTPs (Mobile Apps, Email and SMS) and TOTP.
 
 The User session timeout i.e the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.

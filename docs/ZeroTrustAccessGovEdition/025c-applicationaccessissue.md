@@ -1,18 +1,18 @@
 ---
 comments: true
 ---
-The article contains information on some of the most frequently occurring errors in ZTAA. Below mentioned are the basic troubleshooting steps that the user or admin can undertake before reaching out to support.
+The article contains information on some of the most frequently occurring errors in InstaSafe ZTNA. Below mentioned are the basic troubleshooting steps that the user or admin can undertake before reaching out to support.
 
 Please follow the steps in the exact mentioned order in case you face any of the issues
 
-### Unable to Install or Open the ZTAA application
+### Unable to Install or Open the InstaSafe ZTNA application
 
 Installation might fail or application might not start after installation if 
 
 | Root Cause | Resolution |
 | ------ | ------ |
-| The agent is installed on an OS not supported by ZTAA. | Before installation please check if the Operating system on which the agent is being installed is supported by ZTAA. |
-| Any component is blocked by anti virus or firewall. | Please ensure all required permission are allowed for ZTAA. |
+| The agent is installed on an OS not supported by InstaSafe ZTNA. | Before installation please check if the Operating system on which the agent is being installed is supported by InstaSafe ZTNA. |
+| Any component is blocked by anti virus or firewall. | Please ensure all required permission are allowed for InstaSafe ZTNA. |
 | Installation error might occur in case all component are not downloaded or in case any dependencies are missing duing installation. | Download the agent once again from the  console and install it once again.  |
 
 
@@ -50,9 +50,9 @@ Follow the Steps below incase the agent is installed but connection fails.
 
 ### User is unable to access an application 
 
-Follow the Steps below incase the user gets connected to ZTAA successfully, but faces any of the issues mentioned below. 
+Follow the Steps below incase the user gets connected to InstaSafe ZTNA successfully, but faces any of the issues mentioned below. 
 
-1-  Check from the ZTAA admin portal if access control policy has been configured for the user i.e.The user will be able to access the application only if,the  user has been given explict permission to access the application.
+1-  Check from the InstaSafe ZTNA admin portal if access control policy has been configured for the user i.e.The user will be able to access the application only if,the  user has been given explict permission to access the application.
 
 ```
 P.S Before beginning trouble shooting please confirm if the issue is being faced 
@@ -70,7 +70,7 @@ same error, this might be an issue relating to the gateway.
 
 ![](../static/ztaa/waitforapp.png)
 
-The error mentioned error may occur in case there is a mismatch in system time i.e. date and time on user device and ZTAA server.
+The error mentioned error may occur in case there is a mismatch in system time i.e. date and time on user device and InstaSafe ZTNA server.
 
 
 
@@ -84,7 +84,7 @@ These issues can be resolved by resetting the sytem time and enabling automatic 
 
 ### Device Registration Failure - Windows
 
-As InstaSafe ZTAA follows device authentication model along with user authentication, device details are captured white registering the device. 
+As InstaSafe ZTNA follows device authentication model along with user authentication, device details are captured white registering the device. 
 
 If an end user using Windows family PC is facing Device Registration Failure, it could possibly be one the following reaons for it.
 
@@ -112,7 +112,7 @@ If an end user using Windows family PC is facing Device Registration Failure, it
 
 ### Troubleshooting agent installation on MAC
 
-Current version of ZTAA client requires Homebrew for installation on a mac OS machine.
+Current version of InstaSafe ZTNA client requires Homebrew for installation on a mac OS machine.
 To confirm if Homebrew is installed on the mac machine, execute the below command from the terminal.
 
 ```

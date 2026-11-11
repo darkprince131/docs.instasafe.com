@@ -4,7 +4,7 @@ search:
   exclude: true
 ---
 
-**Superseded.** This is the previous version of this page, kept for comparison. The current page is [Role-Based Application Access Control](007-accesscontrol.md).
+**Superseded.** This is the previous version of this page, kept for comparison. The current page is [Contextual Access Control: Device and Browser Identity](007-accesscontrol.md). Role-based application access control is documented under [User Groups](004b-usergroup.md).
 
 Access Policies are a set of policies that govern user access to a particular application. The admin can configure access rules to define what resources are accessible to the user.
 

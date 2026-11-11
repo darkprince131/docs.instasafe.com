@@ -6,13 +6,13 @@ search:
 
 **Superseded.** This is the previous version of this page, kept for comparison. The current page is [Event Stream](018-eventstream.md).
 
-ZTAA supports integration with external SIEM products. This feature is exclusively used for streaming/sharing system events to customer for their SIEM integration/Analysis.
+InstaSafe ZTNA supports integration with external SIEM products. This feature is exclusively used for streaming/sharing system events to customer for their SIEM integration/Analysis.
 
 It also configures Email and SMS alerts for a wide range of events including security incidents, resource utilization, user-related issues, and other critical activities.
 
 ## Creating Event Stream Profile
 
-The administrator can configure how they should receive ZTAA system events in their infrastructure from **Event Stream Profile**  tab in configuration section of the dashboard.
+The administrator can configure how they should receive InstaSafe ZTNA system events in their infrastructure from **Event Stream Profile**  tab in configuration section of the dashboard.
 
 1. The admin can fill the details of the configuraton in the UI.  
 

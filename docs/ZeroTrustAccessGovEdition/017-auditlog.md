@@ -3,7 +3,7 @@ comments: true
 ---
 ## Audit Logs
 
-For efficient monitoring and compliance ZTAA  collects and maintains a large range of logs and reports. The different logs and reports available under Audit Section of the Dash board are:-
+For efficient monitoring and compliance InstaSafe ZTNA  collects and maintains a large range of logs and reports. The different logs and reports available under Audit Section of the Dash board are:-
 
 - Recent Active Users
 
@@ -33,7 +33,7 @@ For efficient monitoring and compliance ZTAA  collects and maintains a large ran
 
 The below video illustrates the various reports available in the InstaSafe Zero Trust platform for audit and monitoring.
 
-- as illustrated in the video, in the "**Recent Active Users**", all the users connected from the ZTNA & ZTAA agent are displayed. Admins will have the control to logout a user from the agent remotely from the Admin console incase of any suspicious activity.
+- as illustrated in the video, in the "**Recent Active Users**", all the users connected from the ZTNA & the agent are displayed. Admins will have the control to logout a user from the agent remotely from the Admin console incase of any suspicious activity.
 
 ![Audit_All_Report](../static/ztaa/Audit_All_Reports.gif)
 
@@ -44,6 +44,9 @@ The below video illustrates how the various available Audit reports can be downl
 
 ![Audit_All_Report](../static/ztaa/Audit_Exports.gif)
 
+## Restricting access by WAN IP, and the record of it
 
-
-
+Access can be limited to named public IP addresses, separately for administrators and for
+users, so a sign-in from any other address is refused. The attempt and the address it came
+from are recorded in the logs described above, so the restriction is auditable and not only
+preventive. See [Restricting Access by Public IP](wan-ip-restriction.md).

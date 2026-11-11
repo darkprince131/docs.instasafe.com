@@ -1,13 +1,13 @@
 ---
 comments: true
 ---
-#### ZTAA showing offline with network access failed.
+#### InstaSafe ZTNA showing offline with network access failed.
 
 ![](../static/ztaa/appaccess1.png)
 
 **Root Cause**
 
-1.	ZTAA might show offline due to weak internet connection at end user machine.
+1.	InstaSafe ZTNA might show offline due to weak internet connection at end user machine.
 2.	user might be enabled with the ipv6 address.
 
 **Resolution**
@@ -30,7 +30,7 @@ comments: true
 
 ![](../static/ztaa/ipv6.png)
 
-6.	Refresh/restart the ZTAA client.
+6.	Refresh/restart the InstaSafe ZTNA client.
 
 
 #### Applications showing unstable

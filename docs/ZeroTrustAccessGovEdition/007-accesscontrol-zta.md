@@ -4,11 +4,11 @@ search:
   exclude: true
 ---
 
-**Alternative version.** This is the ZTAA-worded version of this page, kept in case the ZTAA console is the one to document. The page in use is [Role-Based Application Access Control](007-accesscontrol.md).
+**Alternative version.** This is the InstaSafe ZTNA-worded version of this page, kept in case the the console is the one to document. The page in use is [Role-Based Application Access Control](007-accesscontrol.md).
 
 # Role-Based Application Access Control
 
-Access policies govern which users reach which applications. ZTAA groups similar users
+Access policies govern which users reach which applications. InstaSafe ZTNA groups similar users
 together based on their role, responsibility or location, so a policy is normally written
 against a user group rather than against named individuals: the group is the role, and the
 policy is the entitlement that role carries.

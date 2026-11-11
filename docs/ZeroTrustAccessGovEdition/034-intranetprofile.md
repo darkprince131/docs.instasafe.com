@@ -1,9 +1,9 @@
 ---
 comments: true
 ---
-When an application is accessed over ZTAA, traffic is routed via the ZTAA Gateways. Users in the intranet when they try to access the applications over ZTAA then their traffic is routed via the internet and then through the ZTAA Gateways, when it could be routed locally. 
+When an application is accessed over InstaSafe ZTNA, traffic is routed via the InstaSafe Gateways. Users in the intranet when they try to access the applications over InstaSafe ZTNA then their traffic is routed via the internet and then through the InstaSafe Gateways, when it could be routed locally. 
 
-This resulted in an use case wherein users should be able to access the applications directly when in the intranet instead of their traffic getting routed through the ZTAA gateways.It would save internet bandwidth and reduce an unnecessary hop.
+This resulted in an use case wherein users should be able to access the applications directly when in the intranet instead of their traffic getting routed through the InstaSafe ZTNA gateways.It would save internet bandwidth and reduce an unnecessary hop.
 
 To implement this use case, there are two configurations which needs to be done:
 

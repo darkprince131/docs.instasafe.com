@@ -3,7 +3,7 @@ comments: true
 ---
 ## Filter Auth Chain 
 
-ZTAA  besides enforcing strict access control can also restrict user access from certain IPs. The admin can blacklist or whitelist IP for individual user. Whitelisting will enable the user to login from the whitelisted IP and block access from all other IP's whereas blackisting will restrict access from a perticular IP only.
+InstaSafe ZTNA  besides enforcing strict access control can also restrict user access from certain IPs. The admin can blacklist or whitelist IP for individual user. Whitelisting will enable the user to login from the whitelisted IP and block access from all other IP's whereas blackisting will restrict access from a perticular IP only.
 
 **IP based Filtering**
 

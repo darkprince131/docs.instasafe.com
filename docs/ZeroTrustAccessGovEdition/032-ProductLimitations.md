@@ -5,11 +5,11 @@ _Last Update Date: 19th Nov 2024_
 
 **Overview**
 
-This section is used to report InstaSafe ZTAA platform's known issues. 
+This section is used to report InstaSafe ZTNA platform's known issues. 
 
 **How often the list is updated**
 
-The InstaSafe ZTAA product known issue list is updated whenever any new issue is identified or an existing issue is fixed. However, we also review and update the list on a monthly basis.
+The InstaSafe ZTNA product known issue list is updated whenever any new issue is identified or an existing issue is fixed. However, we also review and update the list on a monthly basis.
  
 **Contact**
 
@@ -69,7 +69,7 @@ Severity: Low
 
 **Workarounds or Recommendations:** It is recommended that the Proxy should not be changed or modified after the configurations were made. In case of any such needs, please reach out to the Instasafe Support team.
  
-**ZTAA Scheduled Audit Report get delayed in generating**
+**InstaSafe ZTNA Scheduled Audit Report get delayed in generating**
 
 **Issue Description:** 
 If Admin tries to schedule a report in background mode from InstaSafe ZTA Console (Audit Section -> Export -> Schedule), it is observed that in some cases the report is either delayed or fails. 
@@ -82,10 +82,10 @@ Severity: Medium
 
 Workarounds or Recommendations: We recommend admins to retry if the scheduled report fails to deliver.
  
-**User DELETED from Azure AD portal ONLY, NOT getting removed from Azure group and remain active in the ZTAA console**
+**User DELETED from Azure AD portal ONLY, NOT getting removed from Azure group and remain active in the the console**
  
 Issue Description: 
-In some cases, it was observed that if a user is deleted from Azure Portal and not from the On-Premise AD, after the Azure Sync the users are not getting removed from the Group and stay active in ZTAA Console instead of getting removed from the Azure Group and the user status updated as Disabled.
+In some cases, it was observed that if a user is deleted from Azure Portal and not from the On-Premise AD, after the Azure Sync the users are not getting removed from the Group and stay active in the console instead of getting removed from the Azure Group and the user status updated as Disabled.
  
 Product Version: ZTA
 
@@ -109,7 +109,7 @@ Severity : Low
 **Workarounds or Recommendations:**  We recommend adding the applications to IDP.
  
 
-**ZTAA Agent needs to be restarted for new network applications added to Access policy to show Online in the Agent**
+**InstaSafe Agent needs to be restarted for new network applications added to Access policy to show Online in the Agent**
 
 **Issue Description:** On clicking the Refresh button in the agent, the newly added network application to the access policy does NOT show online even though the application is accessible via the gateway. 
 
@@ -124,7 +124,7 @@ Severity: Medium
 
 **Network application access in Windows 8.1 Pro 32 bit & 64 bit**
 
-**Issue Description:** Network applications are showing unstable and are not accessible when a user logs into the ZTAA agent from a Windows 8.1 Pro 32 bit or 64 bit machine.
+**Issue Description:** Network applications are showing unstable and are not accessible when a user logs into the the agent from a Windows 8.1 Pro 32 bit or 64 bit machine.
 
 Component(s): Agent
 

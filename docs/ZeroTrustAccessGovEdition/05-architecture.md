@@ -11,12 +11,12 @@ Architecture
 The architecture is based on the Client-Gateway model as detailed in the CSA architecture guide for SDP .
 
 ### Components
-The primary components of the ZTAA include the Client,  Controller,  Gateway and the IT resources of the organisation. 
+The primary components of the InstaSafe ZTNA include the Client,  Controller,  Gateway and the IT resources of the organisation. 
 
-Clients are devices that are in the hands of users who wish to access resources that are secured by  ZTA. Laptops, Desktops, Mobile phones are examples of such clients. However, the ZTA Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTAA’s access policies are violated or the standards are not met. 
+Clients are devices that are in the hands of users who wish to access resources that are secured by  ZTA. Laptops, Desktops, Mobile phones are examples of such clients. However, the ZTA Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  InstaSafe ZTNA’s access policies are violated or the standards are not met. 
 Note: Client less access the resources can be powered by a browser based access, but with less scope and lesser secure posture validations
 
-Controllers are the decision making components in ZTAA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. ZTA Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
+Controllers are the decision making components in InstaSafe ZTNA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. the Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
 
 Gateways are the components which enforce the policies and entitlements set by the controllers. They verify the client's entitlements to grant them access to the resources only in the client’s context. In the context of the CSA SDP or NIZT ZT model, this component is the Policy Enforcement Point (PEP)
 
@@ -39,7 +39,7 @@ Based on the information gathered on the user and user’s device, the controlle
 
 After receiving the entitlement in the form of a certificate, the client then connects to the gateway by using another SPA mechanism and provides its certificate to access a particular resource. The gateway verifies whether the certificate was issued by the controller. The gateway then uses the entitlement to determine whether the requested resources are within the client’s context by communicating with the controller.
  
-On successful validation of the client’s access request, a mTLS tunnel is established to the gateway. The data flows from the application server to the gateway on the local network and then is relayed to the client by the gateway through the TLS tunnel. The gateway dynamically creates access rules for the client to use the resources based on the messaged via the message queues.This is the first part of the process where the user is allowed into ZTAA’s network to access critical resources. The gateway logs and monitors all the traffic flowing in and out of the network. 
+On successful validation of the client’s access request, a mTLS tunnel is established to the gateway. The data flows from the application server to the gateway on the local network and then is relayed to the client by the gateway through the TLS tunnel. The gateway dynamically creates access rules for the client to use the resources based on the messaged via the message queues.This is the first part of the process where the user is allowed into InstaSafe ZTNA’s network to access critical resources. The gateway logs and monitors all the traffic flowing in and out of the network. 
 
 
 ## Zero Trust Application Access - Third Party Applications through SAML
@@ -51,11 +51,11 @@ The architecture is based on the interaction between a SAML Service Provider and
 ### Components
 The primary components of the SAML based ZTNA access include a Client, a Controller, a Gateway and the resources. 
 
-Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTAA. Laptops, Desktops, Mobile phones are examples of such clients. An agent or the web browser can be used to access applications of this type
+Clients are devices that are in the hands of users who wish to access resources which are secured by  InstaSafe ZTNA. Laptops, Desktops, Mobile phones are examples of such clients. An agent or the web browser can be used to access applications of this type
 
-Controllers are the decision making components in ZTAA . They are connected to Identity providers to gather information about the users trying to access the network. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. The controller also houses an Identity Provider which can be used for logging into SaaS applications that support Single Sign On.
+Controllers are the decision making components in InstaSafe ZTNA . They are connected to Identity providers to gather information about the users trying to access the network. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. The controller also houses an Identity Provider which can be used for logging into SaaS applications that support Single Sign On.
 
-SaaS Application  is the third-party hosted application secured by the ZTAA architecture. It logs the user into the application after receiving an Identity assertion from the Identity Provider
+SaaS Application  is the third-party hosted application secured by the InstaSafe ZTNA architecture. It logs the user into the application after receiving an Identity assertion from the Identity Provider
 
 SAML Service Provider (SP)  is a part of the SaaS application delivery  which sends an SAML AuthNRequest to the Identity Provider to authenticate a user.
 
@@ -72,9 +72,9 @@ SAML Single Sign On (SAML SSO) has two authentication flows which allow develope
 
 This flow is initiated by the identity provider. Once the SP is preconfigured with all the data necessary to establish trust between the SP and IdP, the IdP sends a SAML Response to the SP with the authentication assertions of a users and the SP validates the response and forwards and authenticated application to the user on successful validation of the response.
 
-In ZTAA, this flow is useful when providing the one-click interface to the user to access the third party applications. The flow inside ZTAA is as follows
-User logins into the  ZTAA platform using the agent / web browser (user agent) and navigates to the Application Access screen. The user clicks on any of the third party applications.
-Since the user is already authenticated by the ZTAA platform, the IdP sends a SAML Response to the Service Provider providing the assertions about the user to validate the user’s identity.
+In InstaSafe ZTNA, this flow is useful when providing the one-click interface to the user to access the third party applications. The flow inside InstaSafe ZTNA is as follows
+User logins into the  the platform using the agent / web browser (user agent) and navigates to the Application Access screen. The user clicks on any of the third party applications.
+Since the user is already authenticated by the the platform, the IdP sends a SAML Response to the Service Provider providing the assertions about the user to validate the user’s identity.
 The Service Provider receives and validates the SAML Response sent by the IdP via the user agent.
 On successful validation of the SAML Response, the Service Provider returns an authenticated session of the application to the user agent for the user to consume.
 
@@ -87,11 +87,11 @@ The visualization of the above flow can be seen in the following figure
 
 This flow is initiated by the Service Provider.  The SP is preconfigured with all the data necessary to establish trust between the SP and IdP. The Service Provider sends a AuthNRequest to the IdP requesting for identity assertions. The IdP sends a SAML Response to the SP with the authentication assertions of the users and the SP validates the response and forwards an authenticated application session to the user on successful validation of the response.
 
-In ZTAA, this flow is useful when users try to log into a third party application by clicking on the login with the SSO option provided by the application. The flow is as follows.
+In InstaSafe ZTNA, this flow is useful when users try to log into a third party application by clicking on the login with the SSO option provided by the application. The flow is as follows.
 
-The user is logged into the ZTAA platform. The user tries to login into a third party application using the SSO feature.
+The user is logged into the the platform. The user tries to login into a third party application using the SSO feature.
 The application sends an AuthNRequest to the IdP requesting for assertions about the user’s identity.
-Since the user is already authenticated by the ZTAA platform, the IdP sends a SAML Response to the Service Provider providing the assertions about the user to validate the user’s identity.
+Since the user is already authenticated by the the platform, the IdP sends a SAML Response to the Service Provider providing the assertions about the user to validate the user’s identity.
 The Service Provider receives and validates the SAML Assertion sent by the IdP via the user agent.
 On successful validation of the SAML Response, the Service Provider returns an authenticated session of the application to the user agent for the user to consume.
 

@@ -144,6 +144,7 @@ nav:
       - Architecture: ZeroTrustAccessGovEdition/002-architecture.md
       - Admin Guide:
           - Prerequisites: ZeroTrustAccessGovEdition/031-prerequisites.md
+          - Supported Hypervisors: ZeroTrustAccessGovEdition/hypervisor-support.md
           - Getting Started: ZeroTrustAccessGovEdition/003-gettingstarted.md
       - Identity Management:
           - Create User: ZeroTrustAccessGovEdition/004-creatingusers.md

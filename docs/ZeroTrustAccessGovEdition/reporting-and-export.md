@@ -62,8 +62,11 @@ An export profile names the destination and what to send:
 | **Server Ip** and **Backup Server Ip** | The destination, and a fallback |
 | **Protocol** and **Port** | TCP or UDP, and the port - 514 by default |
 
-Because QRadar, ArcSight and Splunk are named formats rather than generic syslog, the
-records arrive parsed and ready to query, not as unstructured text.
+The **Log Server Format** names the destination the profile is written for. It selects the
+delivery format the platform emits; it is not a promise that a particular collector's
+parsing or field mapping is configured for you. Where a collector expects records in a
+shape of its own, that mapping is set up on the collector, or agreed as part of the
+integration.
 
 For streaming system events to a SIEM in Syslog or FTP/SFTP form, see
 [Event Stream](018-eventstream.md).
@@ -71,6 +74,7 @@ For streaming system events to a SIEM in Syslog or FTP/SFTP form, see
 ## What this does and does not include
 
 The console's dashboard and report set are fixed: they are configured and filtered, not
-designed. There is no report designer inside the console. Reporting that an organisation
-wants in its own shape is built on the exported data, in the platform it already uses for
-that purpose.
+designed in the console itself. Reporting an organisation wants in its own shape is built
+on the exported data, in the analytics or SIEM platform it already uses for that purpose.
+
+**Custom reports and dashboards can be prepared, based on the customer's requirement.**

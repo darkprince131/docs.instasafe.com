@@ -1,30 +1,85 @@
 ---
 comments: true
 ---
-# Identifying the Browser and the Device
+# Identifying the Browser and the Device on Web Access
 
-A device check is a named rule that states what the endpoint must look like. **BrowserID**
-is one of the check types, so "which browser is this, and which version" is a condition the
-platform evaluates before access is allowed - not an attribute that is merely recorded.
+**Device Compliance for Web Access** verifies that a user's device meets the organisation's
+security policy before the user is let into the web portal, instead of relying on username
+and password alone. A device that does not satisfy the configured requirements is refused,
+with the reason stated.
 
-## The browser identity check
+## How it works
 
-**Devices & Checks → Device Checks** holds the rules. A BrowserID rule carries the
-operating system it applies to and the browser or browsers that satisfy it, by name and
-version:
+1. The user opens the web portal and enters their credentials.
+2. The device compliance check starts.
+3. The **Web Device Compliance Agent** - InstaCheck - validates the device on the endpoint.
+4. If every check passes, the user reaches their dashboard. If any check fails, the login is
+   blocked and the reason shown.
+
+The checks are performed on the endpoint itself, not inferred from the browser, which is why
+a browser session can be held to the same standard as an agent session.
+
+## Turning it on
+
+Enable **Device Compliance for Web Access** in **User Settings → Access Controls**:
+
+![Device Compliance for Web Access](../static/devicecheck/device-compliance-web-access.png)
+
+Compliance is then enforced **for users who have Device Bind, Geo Bind or Device Check
+configured at the user or group level**. Enabling the toggle on its own does not impose a
+check that has not been defined; the toggle brings the checks already configured for that
+user or group to bear on web login.
+
+## What is checked on a web login
+
+| Check | What it establishes |
+|---|---|
+| **Device Binding** | The user is logging in from a device registered to them. A personal laptop in place of the registered company laptop is refused. |
+| **Geo Binding** | The login comes from a permitted country or location. |
+| **Antivirus** | Endpoint protection is present and active. A disabled Windows Defender fails the check. |
+| **Operating System** | The device runs an approved OS and version - for example, Windows 11 24H2 or later. |
+| **Browser version** | The browser is at or above the configured build. **Google Chrome** and **Microsoft Edge** are the browsers covered by this check. |
+
+A browser one build below the configured minimum - Chrome 137 against a policy of Chrome 138
+or later - is refused; a browser at or above it is admitted.
+
+### What the user is told when a check fails
+
+| Message | Reason | What the user does |
+|---|---|---|
+| **Device Not Registered** | Logging in from an unapproved device | Use the registered device, or ask the administrator to approve the new one |
+| **Geo Location Mismatch** | Location outside the configured policy | Connect from an approved location, or ask for the policy to be updated |
+| **Operating System Version Mismatch** | OS below the minimum required | Upgrade the operating system |
+| **Antivirus Disabled** | No active antivirus protection detected | Enable or install antivirus and retry |
+| **Browser Version Mismatch** | The browser is below the configured build | Update the browser |
+
+The refusal names the control that failed, so the user can act on it without raising a
+ticket.
+
+## The first login
+
+The first time a user signs in with compliance enabled, they are prompted to download the
+**Web Device Compliance Agent**. The download page offers the installer for each supported
+operating system; on Windows the installer is run as administrator.
+
+![The device status gate](../static/devicecheck/device-status-gate.png)
+
+On the next sign-in the browser asks to open **Insta-Check**, which validates the device
+posture and the geo binding configured for that user, and the sign-in continues.
+
+## Where the checks are defined
+
+A device check is a named rule stating what the endpoint must look like, created in
+**Devices & Checks → Device Checks**. **BrowserID** is one of the check types, and its value
+is a browser name and build:
 
 ![Device checks filtered to BrowserID](../static/devicecheck/browserid-checks.png)
 
-A single rule can list several acceptable browsers, separated by `|` - for example
-`safari 26.4 | safari 18.5 | Microsoft Edge 145.0.3850.71 | Google Chrome 145.0.7732.117` -
-so one rule can express "any of our approved browsers, at or above these builds".
+A single rule can list several acceptable browsers separated by `|`, so one rule expresses
+"any of our approved browsers, at or above these builds", and rules are created per
+operating system.
 
-Rules are created per operating system, so Windows, macOS, Linux, Android and iOS can each
-carry their own browser requirement.
-
-## The full set of checks
-
-BrowserID sits alongside the rest of the endpoint checks. The complete list in the console:
+BrowserID sits alongside the rest of the endpoint checks:
 
 ![Adding a device check, with the check types listed](../static/devicecheck/device-check-types.png)
 
@@ -36,47 +91,13 @@ BrowserID sits alongside the rest of the endpoint checks. The complete list in t
 | Management state | `InDomain`, `DomainName`, `mdm` |
 | Files, processes, registry | `FileExists`, `FileNotExists`, `ProcessRunning`, `ProcessNotRunning`, `RegistryKeyExists` |
 
-Each rule names the operating system it applies to; the list covers Microsoft Windows,
-macOS, iOS, Android, ChromeOS and the Linux distributions.
+Checks are enabled per user group, as the **Device checks** action - see
+[Device Binding for Browser Users](device-binding-clientless.md).
 
-## How the checks reach a browser session
+## What is recorded, and what happens on a change
 
-Checks are performed on the endpoint by **InstaCheck**, which runs locally alongside the
-browser. It is a small download and is not the full access agent.
-
-Turn on **Device Compliance for Web Access** in **User Settings → Access Controls**:
-
-![Device Compliance for Web Access](../static/devicecheck/device-compliance-web-access.png)
-
-With it enabled, a browser session is admitted only once the endpoint answers. If nothing
-answers, the user is stopped at a device-status gate rather than reaching the applications,
-and is offered the download for the platform they are on:
-
-![The device status gate](../static/devicecheck/device-status-gate.png)
-
-InstaCheck is published for Microsoft Windows, macOS and Linux as `.msi`, `.pkg`, `.deb`
-and `.rpm`, with the mobile applications covering iOS and Android.
-
-Because the checks are performed on the endpoint and not inferred from the browser, a
-clientless session with InstaCheck running is subject to the same device checks as an
-agent session - browser identity among them.
-
-## Attaching the checks to users
-
-Device checks are enabled per user group. In **Users & Groups → User Groups**, a group
-carries **Device checks** as one of its actions, alongside **Device Binding**, **Geo
-Binding**, **IP Restriction** and the rest:
-
-![User group actions](../static/devicebind/usergroup-actions.png)
-
-Checks apply to the users in the groups where the action is enabled, so a strict browser
-requirement can be placed on the group that reaches sensitive applications without
-constraining everyone.
-
-## What is recorded, and what happens on a mismatch
-
-Every session records the browser, the platform, the public IP and the country, and those
-are visible in the session and access logs - see
+Every session records the browser, the platform, the public IP and the country, visible in
+the session and access logs - see
 [Last Login, and Access by Day and Time](last-login-and-time.md).
 
 Separately from the checks, **Browser Switch** and **Platform Switch** are available as risk

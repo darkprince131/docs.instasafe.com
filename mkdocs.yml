@@ -218,9 +218,11 @@ nav:
           - InstaSafe Stick: ZeroTrustAccessGovEdition/USBstick.md
       - Contextual Access:
           - Application Access Time: ZeroTrustAccessGovEdition/applicationaccesstime.md
+          - Last Login and Time-Based Access: ZeroTrustAccessGovEdition/last-login-and-time.md
           - Geolocation Based Access: ZeroTrustAccessGovEdition/geolocationbasedaccess.md
           - Based on Device Binding: ZeroTrustAccessGovEdition/devicebinding.md
           - Based on Device Posture: ZeroTrustAccessGovEdition/deviceposture.md
+          - Identifying the Browser and the Device: ZeroTrustAccessGovEdition/browser-identity.md
           - Microsoft O365 & SAML apps: ZeroTrustAccessGovEdition/contextualaccess-o365.md
       - Conditional Access:
           - Conditional Access with MDM: ZeroTrustAccessGovEdition/mobile-device-management.md      

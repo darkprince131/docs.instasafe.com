@@ -52,14 +52,12 @@ every member of that group inherits the entitlement.
 
 ### Granting access to a role
 
-1. **Group the users by role.** Create the group on the
-   [Local Groups](../i365customprivateedition/057-Configuring_Local_Groups.md) page, or import it
-   from [Microsoft Active Directory](../i365customprivateedition/070-Configuring_Microsoft_Active_Directory__AD__Integration.md)
-   so that a directory group becomes the role.
-2. **Define what that role reaches.** Pair the addresses or networks with their services on
-   the [Application Groups](../i365customprivateedition/055-Configuring_Application_Groups.md) page.
-   Services are defined under
-   [Application Services](../i365customprivateedition/056-Configuring_Application_Services.md).
+1. **Group the users by role.** Create the group on this page, or import it from
+   [Active Directory or LDAP](008-importADusers.md) so that a directory group becomes the
+   role.
+2. **Define what that role reaches.** Pair the addresses or networks with their services as
+   an application group - see [Create an Application](005-creatingapplication.md) and
+   [Add application to the gateway](006b-addapptogateway.md).
 3. **Bind them with one rule.** On the Access Rules page, click **Add**, then set
    **Source Type** to *User Group*, **Source** to the role, **Destination Type** to
    *Application Group*, **Destination** to the resources, and **Action** to *Allow*.
@@ -87,5 +85,5 @@ sits in, and a deny on an address beats an allow on that network.
 
 - [Application Access Time](applicationaccesstime.md) - restricting a rule to particular
   days and hours
-- [Configuring Access Rules](../i365customprivateedition/054-Configuring_Access_Rules.md) -
-  editing, bulk upload, export and deletion of rules
+- [Contextual Access Control: Device and Browser Identity](007-accesscontrol.md) - adding a
+  device or browser condition to the same policy

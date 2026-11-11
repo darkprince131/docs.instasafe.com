@@ -18,8 +18,7 @@ The OVA template for the solution components can be deployed on:
 | **KVM** | Including **Red Hat KVM** and **Proxmox VE**, both open source |
 
 KVM-based hypervisors are supported, so a deployment is not tied to a commercial
-virtualisation platform. See also
-[Supported Hypervisor Platforms](../i365customprivateedition/021-Supported_Hypervisor_Platforms_for_ISA_Gateway_Deployment.md).
+virtualisation platform.
 
 The gateway prerequisites page carries a note reading "Supports Other Platforms like
 Windows or Linux VM running on VMWare or Hyper-V". That note names examples of host

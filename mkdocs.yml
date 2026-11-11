@@ -221,6 +221,7 @@ nav:
       - Use Cases:
           - Secure Access: ZeroTrustAccessGovEdition/secureaccess.md
           - Restrict Access: ZeroTrustAccessGovEdition/restrict_access.md
+          - Restricting Access by Public IP: ZeroTrustAccessGovEdition/wan-ip-restriction.md
           - Device Authorization: ZeroTrustAccessGovEdition/deviceauthorization.md
           - Domain Joining: ZeroTrustAccessGovEdition/domainjoin.md
           - SAML based SSO: ZeroTrustAccessGovEdition/013-ConfiguringZTAAasSSOwithSAML.md

@@ -163,6 +163,7 @@ nav:
           - Create Gateways: ZeroTrustAccessGovEdition/006-creatinggateways.md
           - Create Application: ZeroTrustAccessGovEdition/005-creatingapplication.md
           - Add Application to Gateway: ZeroTrustAccessGovEdition/006b-addapptogateway.md
+          - What Traffic Goes Through the Tunnel: ZeroTrustAccessGovEdition/tunnel-scope.md
           - Manage Agent Release: ZeroTrustAccessGovEdition/005b-agentrelease.md
           - View Device Details: ZeroTrustAccessGovEdition/005a-devicedetails.md
           - Package Deployment: ZeroTrustAccessGovEdition/packagedeployer.md
